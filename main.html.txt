@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="refresh" content="0; url=home/home.html">
+    <title>Redirection</title>
+</head>
+<body>
+    <p>Vous allez être redirigé automatiquement. Si ce n'est pas le cas, <a href="home/home.html">cliquez ici</a>.</p>
+</body>
+</html>
