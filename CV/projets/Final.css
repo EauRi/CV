@@ -1,0 +1,156 @@
+/*Pour la question 4*/
+#divMilieu{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 2%;
+    align-items: flex-start;
+}
+
+#box1, #box2, #box3{
+    background-color: rgb(247, 215, 255);
+    border: 2px solid black;
+    padding: 2% 4%;
+    border-radius: 10px;
+    min-width: 30%;
+    max-width: 30%;
+}
+
+.bu{
+    background-color: white;
+}
+
+#butCons, #butOK, #butQui{
+    background-color: rgb(70, 0, 0);
+    color: white;
+    border: transparent;
+}
+.btn-info:hover{
+    background-color: rgb(124, 2, 2);
+    color: white;
+}
+
+#question, #question2{
+    margin-top: 10%;
+}
+
+#anwser, #anwser2, #anwser3{
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+label{
+    padding: 2%;
+    margin-right: 4%;
+}
+
+#timer, #timer2, #timer3{
+    padding: 2%;
+    font-weight: bolder;
+}
+
+#repFinal2, #repFinal3{
+    padding: 1%;
+}
+
+#header{
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+}
+#menuHead{
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+    border: 2px rgb(70, 0, 0) solid;
+}
+
+/*Pour la question 2*/
+.center {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    margin-top: 5%;
+}
+button.butt{
+    margin: auto;
+    text-align: center;
+    padding: 3% 5%;
+    font-size: 30px;
+    font-weight: bolder;
+    border-radius: 10px;
+    border: 3px solid;
+}
+
+/* Pour la question 3*/
+#body{
+    margin: 0.5% 7%;
+    background-color: #ffe2e2b2;
+}
+div.head{    
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+button.space{
+    padding: 10px 10px;
+    width: 15%;
+    font-size: 17px;
+    border-radius: 10px;
+    border: 2px solid;
+    font-weight: bolder;
+    background-color: rgba(255, 255, 255, 0.644);
+    margin-bottom: 5%;
+}
+
+button.form{
+    width: 150%;
+    font-size: 17px;
+    border-radius: 10px;
+    border: 2px solid;
+    font-weight: bolder;
+    background-color: rgba(255, 255, 255, 0.644);
+}
+span:hover{
+    color: white;
+}
+span{
+    font-size: small;
+    color: grey;
+    margin: 0%;
+    padding: 0%;
+}
+input:hover{
+    border-color: rgb(128, 0, 0);
+}
+.solution{
+    align-items: center;
+    justify-content: center;
+    display:flex;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+table, tr, td{
+    border: black solid 1px;
+    border-collapse: collapse;
+    padding: 20px;
+    text-align: center;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4%;
+}
+
+/* Pour question 1 */
+#question1{
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(250, 228, 228);
+}
