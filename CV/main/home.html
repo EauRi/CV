@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auriane EGAL - CV</title>
     <link rel="stylesheet" href="../css/home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
+    <script src="../JS/home.js" defer></script>  <!-- Votre script JS principal -->
 </head>
 <body>
 
@@ -14,225 +13,34 @@
         <div class="logo">Auriane EGAL</div>
         <nav>
             <ul>
-                <li><a href="#experiences">Experiences</a></li>
-                <li><a href="#qualifications">Qualifications</a></li>
-                <li><a href="#portfolio">Porfolio</a></li>
+                <li><a href="#experiences" data-key="menu_experiences"></a></li>
+                <li><a href="#qualifications" data-key="menu_qualifications"></a></li>
+                <li><a href="#portfolio" data-key="menu_portfolio"></a></li>
             </ul>
         </nav>
-        <button class="contact-button" onclick="location.href='mailto:aurianegal@gmx.com?subject=Contact%20via%20le%20site&body=Bonjour';">
-            Contact
-        </button>
-        
+        <div class="language-switcher">
+            <button onclick="setLanguage('fr')">FR</button>
+            <button onclick="setLanguage('en')">EN</button>
+        </div>
+        <button class="contact-button" data-key="contact"></button>
     </header>
 
     <main class="hero-section">
         <div class="hero-text">
-            <h1>Bonjour, je suis Auriane EGAL</h1>
-            <h2>Technicienne de terrain / Support informatique</h2>
+            <h1 data-key="title"></h1>
+            <h2 data-key="subtitle"></h2>
         </div>
     </main>
     
-        <div class="keywords-grid">
-            <div class="keyword">Office 365</div>
-            <div class="keyword">VSCode</div>
-            <div class="keyword">Eclipse</div>
-            <div class="keyword">JetBrains</div>
-            <div class="keyword">C</div>
-            <div class="keyword">C++</div>
-            <div class="keyword">Java</div>
-            <div class="keyword">HTML</div>
-            <div class="keyword">CSS</div>
-            <div class="keyword">JavaScript</div>
-            <div class="keyword">Python</div>
-            <div class="keyword">SQL</div>
-            <div class="keyword">GIT</div>
-            <div class="keyword">Service</div>
-            <div class="keyword">Curieuse</div>
-            <div class="keyword">Autonome</div>
-            <div class="keyword">Persévérante</div>
-            <div class="keyword">Polyvalente</div>
-        </div>
-    
-
-    <!--Page 1 -->
-    <section id="experiences" class="section">
-        <h2>Expériences</h2>
-    </section>
-
-    <div class="container">
-        <!-- Case 1 -->
-        <div class="flip-card card-14">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="../Image/IB.jpg" alt="logoInterblock">
-                </div>
-                <div class="flip-card-back">
-                    <p><br><br></p>
-                    <h4>Technicienne de terrain</h4>
-                    <h5>Septembre 2023 - temps plein</h5>
-                    <p>Réparer les machines à sous dans les casinos du Québec / Canada<br>
-                        Maintenance, réparation, déplacements de poids lourd.<br>
-                        Autonome pour gérer et créer mes horaires.<br>
-                        Bonnes relations service clients et rapide à résoudre les problèmes.</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Case 2 -->
-        <div class="flip-card card-2">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="../Image/beneva.png" alt="looBeneva">
-                </div>
-                <div class="flip-card-back">
-                    <p><br><br></p>
-                    <h4>Analyste technologique</h4>
-                    <h5>2022 à janvier 2023</h5>
-                    <p>Coder en Ansible pour le secteur de l’automatisation en équipe.<br><br></p>
-                    <h4>TI</h4><h5>2022 à Août 2022</h5>
-                    <p>Améliorer des applications pendant une migration de la compagnie.
-                    Agilité à l échelle et en mode SAFe.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Case 3 -->
-        <div class="flip-card card-3">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="../Image/joefresh.jpg" alt="logoJoeFresh">
-                </div>
-                <div class="flip-card-back">
-                    <h4>Associée à la vente</h4> 
-                    <h5>Octobre 2021 à juillet 2022</h5>    
-                    <p>Gestion de stocks.<br>
-                    Vente et service à la clientèle.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Case 4 -->
-        <div class="flip-card card-14">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="../Image/megaVrac.jpg" alt="logoMegaVrac">
-                </div>
-                <div class="flip-card-back">
-                    <h4>Associée à la vente</h4>
-                    <h5>Aout 2023 Septembre 2023</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-   <!-- Page 2 -->
-   <div>
-    <section id="qualifications" class="section">
-        <h2>Qualifications</h2>
-    </section>
-    <div class="circle-layout">
-        <!-- Première ligne : Grand - Petit - Grand -->
-        <div class="circle-row">
-            <!-- Grand cercle gauche -->
-            <div class="circle-item large-circle">
-                <div class="image-container">
-                    <img src="../Image/udem.png" alt="Université de Montréal">
-                </div>
-                <div class="circle-text">
-                    <p>2020 à 2022 – Université de Montréal (UdeM)<br>Canada, Baccalauréat en informatique</p>
-                </div>
-            </div>
-
-            <!-- Petit cercle milieu -->
-            <div class="circle-item small-circle">
-                <p>11 Self Learning certificats</p>
-            </div>
-
-            <!-- Grand cercle droit -->
-            <div class="circle-item large-circle">
-                <div class="image-container">
-                    <img src="../Image/permis.png" alt="Permis de conduire">
-                </div>
-                <div class="circle-text">
-                    <p>Permis de conduire voiture et moto</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Deuxième ligne : Petit - Grand - Petit -->
-        <div class="circle-row">
-            <!-- Petit cercle gauche -->
-            <div class="circle-item small-circle">
-                <p>15 certificats<br>technicienne IB</p>
-            </div>
-
-            <!-- Grand cercle milieu -->
-            <div class="circle-item large-circle">
-                <div class="image-container">
-                    <img src="../Image/diplome.jpg" alt="Diplôme de lycée français">
-                </div>
-                <div class="circle-text">
-                    <p>2018 – Diplôme de lycée français<br>France, baccalauréat équivalence de la fin du secondaire</p>
-                </div>
-            </div>
-
-            <!-- Petit cercle droit -->
-            <div class="circle-item small-circle">
-                <p>6 certificats universel<br>Relie à IB</p>
-            </div>
-        </div>
-    </div>  
-    
-</div>
-
-    <!-- Page 3 -->
-<div>
     <section id="portfolio" class="section">
-        <h2>Portfolio</h2>
-    </section>
+        <h2 data-key="menu_portfolio"></h2>
         <div class="portfolio-container">
-            <!-- Case 1 -->
             <div class="portfolio-box">
-                <h3>CV PDF</h3>
-                <p>Téléchargez mon CV.</p>
-                <a href="../projets/CV.pdf" download="CV_Auriane_Egal.pdf">Français</a>
-                <a href="../projets/Resume.pdf" download="CV_Auriane_Egal.pdf">English</a>
-            </div>
-
-            <!-- Case 2 -->
-            <div class="portfolio-box">
-                <h3>Projet Java, application d'un gym.</h3>
-                <p>Application qu'on pourra retrouver à l'acceuil d'un gym pour le management.</p>
-                <a href="../projets/GymApp.jar" download="GymApp.jar">Télécharger</a>
-            </div>
-
-            <!-- Case 3 -->
-            <div class="portfolio-box">
-                <h3>Application java d'un convertisseur de monnaies.</h3>
-                <p>Convertisseur des monnaies les plus fortes.</p>
-                <a href="../projets/CurrencyConverter.jar" download="CurrencyConverter.jar">Télécharger</a>
-            </div>
-
-            <!-- Case 4 -->
-            <div class="portfolio-box">
-                <h3>Application java pour la recherche de mots.</h3>
-                <p>Un moteur de recherche sur un texte.</p>
-                <a href="../projets/WordFind.jar" download="WordFind.jar">Télécharger</a>
-            </div>
-
-            <!-- Case 5 -->
-            <div class="portfolio-box">
-                <h3>Lien vers un site web / jeux</h3>
-                <p>Voici un exemple de site web effectué à l'université.</p>
-                <a href="../projets/Final.html">Il faudra patienter quelques secondes</a>
+                <h3 data-key="portfolio_cv"></h3>
+                <p data-key="portfolio_cv_desc"></p>
             </div>
         </div>
-    </div>
-    
-    <script src="../JS/home.js"></script>
+    </section>
 
 </body>
 </html>

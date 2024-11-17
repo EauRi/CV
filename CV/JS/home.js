@@ -1,29 +1,41 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const keywords = document.querySelectorAll(".keyword");
-    const container = document.querySelector(".hero-section");
-    const heroText = document.querySelector(".hero-text"); // Texte principal
+let translations = {};  // Cette variable va contenir toutes les traductions
 
-    // Calculer les dimensions du texte principal
-    const heroTextRect = heroText.getBoundingClientRect();
-    const containerRect = container.getBoundingClientRect();
+// Fonction pour charger le fichier JSON avec les traductions
+async function loadTranslations(lang) {
+    try {
+        // Charger le fichier JSON en fonction de la langue
+        const response = await fetch('../JSon/lang.json');
+        const data = await response.json();  // Parse le JSON récupéré
 
-    // Rayon pour le cercle autour du texte
-    const radius = 200; // Rayon du cercle
-    const centerX = heroTextRect.left + heroTextRect.width / 2; // Centre du texte
-    const centerY = heroTextRect.top + heroTextRect.height / 2;
+        translations = data;  // Assigner les données à la variable 'translations'
 
-    // Placer les mots en cercle autour du texte
-    const totalKeywords = keywords.length;
-    const angleStep = (2 * Math.PI) / totalKeywords; // Espacement angulaire entre chaque mot
+        // Mettre à jour le contenu de la page avec les traductions
+        updateTextContent(lang);
+    } catch (error) {
+        console.error('Erreur lors du chargement du fichier JSON:', error);
+    }
+}
 
-    keywords.forEach((keyword, index) => {
-        const angle = angleStep * index; // Calculer l'angle pour chaque mot
-        const offsetX = centerX + radius * Math.cos(angle) - keyword.offsetWidth / 2; // Position horizontale
-        const offsetY = centerY + radius * Math.sin(angle) - keyword.offsetHeight / 2; // Position verticale
+// Fonction pour mettre à jour le texte de la page selon la langue sélectionnée
+function updateTextContent(lang) {
+    if (!translations[lang]) return;  // Vérifier que la langue existe dans les traductions
 
-        // Placer chaque mot
-        keyword.style.position = "absolute";
-        keyword.style.left = `${offsetX}px`;
-        keyword.style.top = `${offsetY}px`;
+    // Mettre à jour tous les éléments ayant un attribut 'data-key'
+    document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (translations[lang][key]) {
+            el.textContent = translations[lang][key];
+        }
     });
+}
+
+// Fonction pour changer la langue
+function setLanguage(lang) {
+    updateTextContent(lang);  // Mettre à jour le contenu avec la nouvelle langue
+    document.documentElement.setAttribute('lang', lang);  // Met à jour l'attribut 'lang' du HTML
+}
+
+// Charger les traductions en français par défaut
+document.addEventListener('DOMContentLoaded', () => {
+    loadTranslations('fr');  // Charger les traductions en français au chargement de la page
 });

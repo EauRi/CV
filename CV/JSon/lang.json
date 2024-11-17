@@ -1,0 +1,46 @@
+{
+    "fr": {
+        "title": "Bonjour, je suis Auriane EGAL",
+        "subtitle": "Technicienne de terrain / Support informatique",
+        "menu_experiences": "Expériences",
+        "menu_qualifications": "Qualifications",
+        "menu_portfolio": "Portfolio",
+        "contact": "Contact",
+        "keywords": [
+            "Office 365", "VSCode", "Eclipse", "JetBrains", "C", "C++", 
+            "Java", "HTML", "CSS", "JavaScript", "Python", "SQL", "GIT",
+            "Service", "Curieuse", "Autonome", "Persévérante", "Polyvalente"
+        ],
+        "portfolio_cv": "Téléchargez mon CV",
+        "portfolio_gym": "Projet Java, application d'un gym.",
+        "portfolio_gym_desc": "Application qu'on pourra retrouver à l'acceuil d'un gym pour le management.",
+        "portfolio_currency": "Application java d'un convertisseur de monnaies.",
+        "portfolio_currency_desc": "Convertisseur des monnaies les plus fortes.",
+        "portfolio_search": "Application java pour la recherche de mots.",
+        "portfolio_search_desc": "Un moteur de recherche sur un texte.",
+        "portfolio_website": "Lien vers un site web / jeux",
+        "portfolio_website_desc": "Voici un exemple de site web effectué à l'université."
+    },
+    "en": {
+        "title": "Hello, I am Auriane EGAL",
+        "subtitle": "Field Technician / IT Support",
+        "menu_experiences": "Experiences",
+        "menu_qualifications": "Qualifications",
+        "menu_portfolio": "Portfolio",
+        "contact": "Contact",
+        "keywords": [
+            "Office 365", "VSCode", "Eclipse", "JetBrains", "C", "C++", 
+            "Java", "HTML", "CSS", "JavaScript", "Python", "SQL", "GIT",
+            "Service", "Curious", "Autonomous", "Perseverant", "Versatile"
+        ],
+        "portfolio_cv": "Download my Resume",
+        "portfolio_gym": "Java Project, Gym Application",
+        "portfolio_gym_desc": "Application for gym management available at the reception.",
+        "portfolio_currency": "Java Currency Converter App",
+        "portfolio_currency_desc": "Converter for the most prominent currencies.",
+        "portfolio_search": "Java Word Search App",
+        "portfolio_search_desc": "A search engine for text content.",
+        "portfolio_website": "Link to a website/game",
+        "portfolio_website_desc": "Here is an example of a website created at university."
+    }
+}
