@@ -96,7 +96,6 @@ body {
 
 /* Conteneur pour les mots-clés */
 .keyword {
-    position: absolute;
     font-size: 1.2rem;
     color: #333;
     background-color: #f5f5f5;
@@ -107,6 +106,18 @@ body {
     transition: transform 0.3s ease;
 }
 
+.keywords-grid div {
+    position: absolute;
+    font-size: 16px;
+    color: #d4a3738d;
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 5px 10px;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 .page {
     height: 100vh;
