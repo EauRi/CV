@@ -33,11 +33,8 @@
       "portfolio_word_find_desc": "Un moteur de recherche sur un texte.",
       "portfolio_web_project": "Lien vers un site web / jeu",
       "portfolio_web_project_desc": "Voici un exemple de site web effectué à l'université."
-    }
-  }
+    },
 
-
-  {
     "en": {
       "menu_experiences": "Experiences",
       "menu_qualifications": "Qualifications",
@@ -73,4 +70,4 @@
       "portfolio_web_project": "Link to a website / game",
       "portfolio_web_project_desc": "Here is an example of a website created at university."
     }
-  }  
+}
