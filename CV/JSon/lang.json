@@ -4,7 +4,7 @@
       "menu_qualifications": "Qualifications",
       "menu_portfolio": "Portfolio",
       "contact": "Contact",
-      "title": "Bonjour, je suis Auriane EGAL",
+      "title": "Auriane EGAL",
       "subtitle": "Technicienne de terrain / Support informatique",
       "experience_1_title": "Technicienne de terrain",
       "experience_1_period": "Septembre 2023 - temps plein",
@@ -35,4 +35,42 @@
       "portfolio_web_project_desc": "Voici un exemple de site web effectué à l'université."
     }
   }
-  
+
+
+  {
+    "en": {
+      "menu_experiences": "Experiences",
+      "menu_qualifications": "Qualifications",
+      "menu_portfolio": "Portfolio",
+      "contact": "Contact",
+      "title": "Auriane EGAL",
+      "subtitle": "Field Technician / IT Support",
+      "experience_1_title": "Field Technician",
+      "experience_1_period": "September 2023 - Full-time",
+      "experience_1_desc": "Repair slot machines in casinos in Quebec / Canada. Maintenance, repair, heavy-duty relocations. Self-managed scheduling. Excellent customer service and quick to resolve issues.",
+      "experience_2_title": "Technology Analyst",
+      "experience_2_period": "2022 to January 2023",
+      "experience_2_desc": "Coding in Ansible for the automation sector in a team.",
+      "experience_3_title": "Sales Associate",
+      "experience_3_period": "October 2021 to July 2022",
+      "experience_3_desc": "Stock management. Sales and customer service.",
+      "experience_4_title": "Sales Associate",
+      "experience_4_period": "August 2023 to September 2023",
+      "qualification_1_desc": "2020 to 2022 – University of Montreal (UdeM). Canada, Bachelor's degree in Computer Science.",
+      "qualification_2_desc": "11 Self-learning certificates",
+      "qualification_3_desc": "Driver's license for car and motorcycle",
+      "qualification_4_desc": "15 IB technician certificates",
+      "qualification_5_desc": "2018 – French High School Diploma, France, equivalent to the end of secondary school.",
+      "qualification_6_desc": "6 universal certificates related to IB",
+      "portfolio_cv": "PDF CV",
+      "portfolio_cv_desc": "Download my CV.",
+      "portfolio_gym_app": "Java Project - Gym Application",
+      "portfolio_gym_app_desc": "An application that can be found at the entrance of a gym for management purposes.",
+      "portfolio_currency_converter": "Java Application - Currency Converter",
+      "portfolio_currency_converter_desc": "Converts the most powerful currencies.",
+      "portfolio_word_find": "Java Application - Word Search",
+      "portfolio_word_find_desc": "A search engine for a text.",
+      "portfolio_web_project": "Link to a website / game",
+      "portfolio_web_project_desc": "Here is an example of a website created at university."
+    }
+  }  
