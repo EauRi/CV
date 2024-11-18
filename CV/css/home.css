@@ -94,22 +94,11 @@ body {
     color: #d4a373;
 }
 
-/* Conteneur principal pour les mots-clés */
-.keywords-grid {
-    position: relative; /* Important pour la relation avec les enfants absolus */
-    width: 100%;
-    height: 100%;
-    background-color: rgba(212, 163, 115, 0.1); /* Couleur de fond subtile */
-    pointer-events: none; /* Empêche d'interagir avec le conteneur */
-    overflow: hidden; /* Évite les débordements des mots */
-    z-index: 1;
-}
-
 /* Style des mots-clés */
 .keyword {
     position: absolute;
     font-size: 1rem;
-    color: #fff;
+    color: #000000;
     background-color: #f28767; /* Couleur de fond des mots-clés */
     padding: 5px 10px;
     border-radius: 10px;
@@ -119,13 +108,6 @@ body {
     transition: transform 0.3s ease, background-color 0.3s ease;
     pointer-events: all; /* Permet d'interagir avec les mots-clés */
     z-index: 10;
-}
-
-/* Animation au survol */
-.keyword:hover {
-    transform: scale(1.2);
-    background-color: #007bff;
-    color: #fff;
 }
 
 .page {
