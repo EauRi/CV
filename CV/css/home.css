@@ -94,23 +94,12 @@ body {
     color: #d4a373;
 }
 
-/* Conteneur pour les mots-clés */
-.keywords-grid {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* Empêche d'interagir avec les mots-clés */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 /* Style des mots-clés */
 .keyword {
     position: absolute;
     font-size: 1rem;
     color: #fff;
-    background-color: #333;
+    background-color: #d4a373b4;
     padding: 5px 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
