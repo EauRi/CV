@@ -1,4 +1,4 @@
-// JSON trans for FR and EN
+// JSON translations for FR and EN
 const trans = {
     fr: {
         title: "Bienvenue sur mon CV",
@@ -80,6 +80,9 @@ document.addEventListener("DOMContentLoaded", function () {
             setLanguage(selectedLanguage);
         });
     });
+
+    // Position keywords in a circle on load
+    positionKeywordsInCircle();
 });
 
 // Function to arrange keywords in a circle
@@ -90,21 +93,21 @@ function positionKeywordsInCircle() {
         return;
     }
 
-    const container = document.querySelector(".hero-section");
+    const heroSection = document.querySelector(".hero-section");
     const heroText = document.querySelector(".hero-text");
 
     // Verify container and hero text existence
-    if (!container || !heroText) {
-        console.error("Conteneur ou texte principal manquant.");
+    if (!heroSection || !heroText) {
+        console.error("Section principale ou texte manquant.");
         return;
     }
 
     // Circle radius and center
-    const radius = 200;
+    const radius = 150; // Adjust radius as needed
+    const heroSectionRect = heroSection.getBoundingClientRect();
     const heroTextRect = heroText.getBoundingClientRect();
-    const containerRect = container.getBoundingClientRect();
-    const centerX = heroTextRect.left + heroTextRect.width / 2;
-    const centerY = heroTextRect.top + heroTextRect.height / 2 - containerRect.top;
+    const centerX = heroTextRect.left + heroTextRect.width / 2 - heroSectionRect.left;
+    const centerY = heroTextRect.bottom - heroSectionRect.top + 50; // Adjust 50px below the text
 
     // Angular step between keywords
     const totalKeywords = keywords.length;
@@ -121,4 +124,7 @@ function positionKeywordsInCircle() {
         keyword.style.left = `${offsetX}px`;
         keyword.style.top = `${offsetY}px`;
     });
+
+    // Ensure the hero section has `position: relative`
+    heroSection.style.position = "relative";
 }
