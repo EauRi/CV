@@ -103,7 +103,7 @@ function positionKeywordsInCircle() {
     }
 
     // Circle radius and center
-    const radius = 150; // Adjust radius as needed
+    const radius = 180; // Adjust radius as needed
     const heroSectionRect = heroSection.getBoundingClientRect();
     const heroTextRect = heroText.getBoundingClientRect();
     const centerX = heroTextRect.left + heroTextRect.width / 2 - heroSectionRect.left;
