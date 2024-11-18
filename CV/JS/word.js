@@ -1,8 +1,6 @@
 // JSON translations for FR and EN
 const trans = {
     fr: {
-        title: "Bienvenue sur mon CV",
-        subtitle: "Découvrez mes compétences et expériences",
         keyword_office_365: "Office 365",
         keyword_vscode: "VSCode",
         keyword_eclipse: "Eclipse",
@@ -22,8 +20,6 @@ const trans = {
         keyword_polyvalente: "Polyvalente"
     },
     en: {
-        title: "Welcome to my CV",
-        subtitle: "Explore my skills and experiences",
         keyword_office_365: "Office 365",
         keyword_vscode: "VSCode",
         keyword_eclipse: "Eclipse",
