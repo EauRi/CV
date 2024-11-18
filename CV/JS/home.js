@@ -38,10 +38,10 @@ function updateTextContent(lang) {
             div.textContent = word;
             keywordsContainer.appendChild(div);
         });
-    }
 
-    // Repositionner les mots-clés en cercle après la mise à jour
-    positionKeywordsInCircle();
+        // Repositionner les mots-clés en cercle après la mise à jour
+        positionKeywordsInCircle();
+    }
 }
 
 // Fonction pour définir la langue
