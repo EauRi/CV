@@ -1,5 +1,5 @@
-// JSON translations for FR and EN
-const translations = {
+// JSON trans for FR and EN
+const trans = {
     fr: {
         title: "Bienvenue sur mon CV",
         subtitle: "Découvrez mes compétences et expériences",
@@ -49,8 +49,8 @@ function updateTextContent(language) {
     const elements = document.querySelectorAll("[data-key]");
     elements.forEach(element => {
         const key = element.getAttribute("data-key");
-        if (translations[language] && translations[language][key]) {
-            element.textContent = translations[language][key];
+        if (trans[language] && trans[language][key]) {
+            element.textContent = trans[language][key];
         }
     });
 
@@ -60,7 +60,7 @@ function updateTextContent(language) {
 
 // Function to set the language
 function setLanguage(language) {
-    if (translations[language]) {
+    if (trans[language]) {
         updateTextContent(language);
     } else {
         console.error(`Language '${language}' is not supported.`);
