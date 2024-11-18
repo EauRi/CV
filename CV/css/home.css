@@ -98,15 +98,13 @@ body {
 .keyword {
     position: absolute;
     font-size: 1rem;
-    color: #000000;
-    background-color: #d4a373ab; /* Couleur de fond des mots-clés */
+    color: #000000a7;
+    background-color: #d4a3738a; /* Couleur de fond des mots-clés */
     padding: 7px 10px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre subtile */
     text-align: center;
     white-space: nowrap;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    pointer-events: all; /* Permet d'interagir avec les mots-clés */
     z-index: 10;
 }
 
