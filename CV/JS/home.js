@@ -1,10 +1,10 @@
 let translations = {}; // Variable pour stocker les traductions
 
-// Fonction pour charger les traductions depuis le fichier JSON
+// Fonction pour charger les traductions à partir du fichier JSON
 async function loadTranslations(lang) {
     try {
         // Charger le fichier JSON
-        const response = await fetch('path/to/lang.json');  // Remplacez par le chemin réel de votre fichier JSON
+        const response = await fetch('../JSon/lang.json');
         const data = await response.json(); // Récupérer le contenu JSON
 
         translations = data; // Stocker les traductions dans la variable 'translations'
@@ -14,11 +14,12 @@ async function loadTranslations(lang) {
     }
 }
 
-// Fonction pour mettre à jour le contenu texte selon la langue
+// Fonction pour mettre à jour le contenu du texte selon la langue
 function updateTextContent(lang) {
+    // Vérifiez que les traductions sont chargées
     if (!translations[lang]) return;
 
-    // Mettre à jour les éléments avec les clés data-key
+    // Mettre à jour tous les éléments avec data-key
     document.querySelectorAll('[data-key]').forEach(el => {
         const key = el.getAttribute('data-key');
         if (translations[lang][key]) {
@@ -26,22 +27,19 @@ function updateTextContent(lang) {
         }
     });
 
-    // Mettre à jour les mots-clés dynamiques (ajout des mots dans la grille)
+    // Mettre à jour les mots-clés dynamiques (si nécessaire)
     const keywords = translations[lang].keywords;
     const keywordsContainer = document.querySelector('.grid');
-    
     if (keywordsContainer) {
-        keywordsContainer.innerHTML = '';  // Vider la grille avant d'ajouter les nouveaux mots
-        keywords.forEach(word => {
-            const div = document.createElement('div');
-            div.className = 'keyword';
-            div.textContent = word;
-            keywordsContainer.appendChild(div);
+        // Mettre à jour le contenu des mots-clés dans la grille
+        const keywordElements = document.querySelectorAll('.keyword');
+        keywordElements.forEach((el, index) => {
+            el.textContent = keywords[index] || '';
         });
-
-        // Repositionner les mots-clés en cercle après la mise à jour
-        positionKeywordsInCircle();
     }
+
+    // Repositionner les mots-clés en cercle après la mise à jour du texte
+    positionKeywordsInCircle();
 }
 
 // Fonction pour définir la langue
@@ -55,43 +53,47 @@ document.addEventListener('DOMContentLoaded', () => {
     loadTranslations('fr'); // Charger les traductions en français par défaut
 });
 
-// Fonction pour disposer les mots-clés en cercle
+// Fonction pour positionner les mots-clés en cercle autour du texte
 function positionKeywordsInCircle() {
-    const keywords = document.querySelectorAll('.keyword');
+    const keywords = document.querySelectorAll(".keyword");
     if (keywords.length === 0) {
-        console.error('Aucun mot-clé trouvé.');
+        console.error("Aucun mot-clé trouvé. Vérifiez votre HTML.");
         return;
     }
 
-    const heroSection = document.querySelector('.hero-section');
-    const heroText = document.querySelector('.hero-text');
+    const heroSection = document.querySelector(".hero-section");
+    const heroText = document.querySelector(".hero-text");
 
+    // Vérification de l'existence de la section principale et du texte
     if (!heroSection || !heroText) {
-        console.error('Section principale ou texte manquant.');
+        console.error("Section principale ou texte manquant.");
         return;
     }
 
-    // Paramètres pour le cercle
-    const radius = 180; // Rayon du cercle
-    const heroSectionRect = heroSection.getBoundingClientRect();
+    // Paramètres pour ajuster la disposition
+    const radius = 180;  // Rayon du cercle
     const heroTextRect = heroText.getBoundingClientRect();
-    const centerX = heroTextRect.left + heroTextRect.width / 2 - heroSectionRect.left;
-    const centerY = heroTextRect.bottom - heroSectionRect.top + 50; // Ajuster la position
+    
+    // Calcul de la position du centre du texte (titre + sous-titre)
+    const centerX = heroTextRect.left + heroTextRect.width / 2;
+    const centerY = heroTextRect.top + heroTextRect.height / 2 + 50;  // Décalage de 50px en dessous du texte
 
+    // Calcul de l'angle entre les mots-clés en fonction du nombre total de mots
     const totalKeywords = keywords.length;
-    const angleStep = (2 * Math.PI) / totalKeywords; // Calculer l'angle entre chaque mot-clé
+    const angleStep = (2 * Math.PI) / totalKeywords;
 
-    // Positionner les mots-clés
+    // Positionnement des mots-clés autour du texte
     keywords.forEach((keyword, index) => {
         const angle = angleStep * index;
         const offsetX = centerX + radius * Math.cos(angle) - keyword.offsetWidth / 2;
         const offsetY = centerY + radius * Math.sin(angle) - keyword.offsetHeight / 2;
 
-        keyword.style.position = 'absolute';
+        // Application des positions calculées
+        keyword.style.position = "absolute";
         keyword.style.left = `${offsetX}px`;
         keyword.style.top = `${offsetY}px`;
     });
 
-    // S'assurer que la section a 'position: relative' pour contenir les mots-clés
-    heroSection.style.position = 'relative';
+    // Assurer que la section principale a un positionnement relatif
+    heroSection.style.position = "relative";
 }
