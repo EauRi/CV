@@ -104,7 +104,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);  /* Arrière-plan subtil */
     border-radius: 50%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);  /* Ombre douce autour du cercle */
     overflow: hidden;
@@ -123,13 +122,6 @@ body {
     transform-origin: center center;
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
     text-transform: capitalize;
-    }
-
-    /* Effet au survol des mots-clés */
-    .keyword:hover {
-    background-color: #0056b3;
-    transform: scale(1.2); /* Agrandissement au survol */
-    cursor: pointer;
     }
 
     /* Animation de rotation douce du cercle */
