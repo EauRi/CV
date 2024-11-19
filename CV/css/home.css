@@ -37,6 +37,7 @@ body::after {
     left: 0;
     width: 100%;
     z-index: 1000;
+    height: 80px;
     box-shadow: 0 2px 2px -2px black;
     border-bottom: 2px solid black;
 }
@@ -83,6 +84,9 @@ body::after {
 @media (max-width: 768px) {
     .navbar ul li a {
         font-size: 0.8rem;
+    }
+    .navbar {
+        height: 70px;  /* Augmente la hauteur pour les petits écrans */
     }
 }
 
