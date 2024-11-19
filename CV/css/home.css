@@ -3,14 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-    scroll-behavior: smooth;
 }
 
 body {
     color: #ffffff;
     background-color: #2e1b2b;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
 }
 
 body::after {
@@ -191,12 +188,10 @@ body::after {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 60vh;
     background: #2d1b28;
     color: white;
     text-align: left;
     padding: 40px;
-    height: 100vh;
 }
 
 .hero-text {
@@ -262,15 +257,6 @@ body::after {
     }
 }
 
-.page {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    scroll-snap-align: start;
-    padding: 20px;
-}
-
 /* Expérience - Design élégant */
 .section {
     display: flex;
@@ -328,7 +314,6 @@ body::after {
     gap: 20px;
     margin: 20px auto;
     padding: 20px;
-    max-width: 1200px;
 }
 
 /* Cartes */
