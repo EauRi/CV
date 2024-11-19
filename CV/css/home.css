@@ -75,9 +75,9 @@ body {
 }
 
 .hero-text h3 {
-    font-size: 18px;
+    font-size: 17px;
     font-style: italic;
-    color: #6c757d; /* Gris doux pour un contraste subtil */
+    color: #d4a373b4;
     margin-top: 10px;
     line-height: 1.5;
 }
