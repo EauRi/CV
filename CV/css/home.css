@@ -94,28 +94,22 @@ body {
     color: #d4a373;
 }
 
-.keyword {
-    position: absolute;
-    font-size: 14px; /* Ajustez la taille du texte */
-    padding: 5px;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    color: white;
-    transform-origin: center;
-    pointer-events: all; /* Permet d'interagir avec les mots-clés */
+.keywords-container {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Ajustez cette hauteur en fonction de vos besoins */
+    margin-top: 50px;
+    text-align: center;
 }
 
-.grid {
-    position: absolute;
-    top: 50%; /* Centre les mots-clés autour du titre */
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centrage parfait */
-    width: 300px; /* Ajustez la taille selon vos besoins */
-    height: 300px; /* Ajustez la taille selon vos besoins */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+.keyword {
+position: absolute;
+font-size: 14px; /* Ajustez la taille du texte */
+padding: 5px;
+background-color: rgba(0, 0, 0, 0.2);
+border-radius: 5px;
+color: white;
+transform-origin: center;
 }
 
 .page {
