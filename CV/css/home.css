@@ -22,8 +22,84 @@ body::after {
 .allpage {
     height: 100vh;
     scroll-snap-align: start;
-    padding: 20px;  /* Ajout d'un petit padding */
     box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;  /* Distribue l'espace entre les éléments */
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #2e1b2b;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 2px -2px black;
+    border-bottom: 2px solid black;
+}
+
+.navbar .language-switcher {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.navbar nav {
+    flex: 1; /* La partie nav prendra toute la largeur disponible */
+    display: flex;
+    justify-content: center; /* Centre les éléments dans la nav */
+}
+
+.navbar ul {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+    justify-content: center; /* Assure que les éléments de la liste sont centrés */
+}
+
+.navbar ul li {
+    list-style: none; /* Supprime les puces des éléments li */
+}
+
+.navbar ul li a {
+    color: #d1a575;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    text-align: center; /* Centre le texte dans chaque lien */
+}
+
+/* Responsivité : Réduire la taille du texte sur des écrans plus petits */
+@media (max-width: 1024px) {
+    .navbar ul li a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar ul li a {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar ul li a {
+        font-size: 0.7rem;
+    }
+}
+
+/* Responsivité : Ajuste l'espace réservé pour les petits écrans */
+@media (max-width: 768px) {
+    .navbar {
+        height: 50px; /* Réduit la hauteur de la navbar sur les petits écrans */
+    }
+    .hero-section {
+        padding-top: 60px; /* Réduit l'espace réservé sous la navbar pour les petits écrans */
+    }
 }
 
 .contact-button {
@@ -161,83 +237,6 @@ body::after {
     align-items: center;
     scroll-snap-align: start;
     padding: 20px;
-}
-
-/* Navbar */
-.navbar {
-    position: fixed;
-    display: flex;
-    justify-content: space-between;  /* Distribue l'espace entre les éléments */
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #2e1b2b;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 2px -2px black;
-    border-bottom: 2px solid black;
-}
-
-.navbar .language-switcher {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
-.navbar nav {
-    flex: 1; /* La partie nav prendra toute la largeur disponible */
-    display: flex;
-    justify-content: center; /* Centre les éléments dans la nav */
-}
-
-.navbar ul {
-    display: flex;
-    gap: 1.5rem;
-    padding: 0;
-    margin: 0;
-    justify-content: center; /* Assure que les éléments de la liste sont centrés */
-}
-
-.navbar ul li {
-    list-style: none; /* Supprime les puces des éléments li */
-}
-
-.navbar ul li a {
-    color: #d1a575;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    display: block;
-    text-align: center; /* Centre le texte dans chaque lien */
-}
-
-/* Responsivité : Réduire la taille du texte sur des écrans plus petits */
-@media (max-width: 1024px) {
-    .navbar ul li a {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar ul li a {
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar ul li a {
-        font-size: 0.7rem;
-    }
-}
-/* Responsivité : Ajuste l'espace réservé pour les petits écrans */
-@media (max-width: 768px) {
-    .navbar {
-        height: 50px; /* Réduit la hauteur de la navbar sur les petits écrans */
-    }
-    .hero-section {
-        padding-top: 60px; /* Réduit l'espace réservé sous la navbar pour les petits écrans */
-    }
 }
 
 /* Expérience - Design élégant */
