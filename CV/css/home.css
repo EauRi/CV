@@ -19,6 +19,27 @@ body::after {
     height: 200px; 
 }
 
+.allpage {
+    height: 100vh;
+    scroll-snap-align: start;
+    padding: 20px;  /* Ajout d'un petit padding */
+    box-sizing: border-box;
+}
+
+.contact-button {
+    padding: 0.5rem 1rem;
+    color: #d1a575;
+    border: 2px solid #d1a575;
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #d1a575;
+    color: #2e1b2b;
+}
+
 .language-switcher {
     display: flex;
     justify-content: center;
@@ -219,27 +240,6 @@ body::after {
     }
 }
 
-
-.contact-button {
-    padding: 0.5rem 1rem;
-    color: #d1a575;
-    border: 2px solid #d1a575;
-    background: transparent;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.contact-button:hover {
-    background-color: #d1a575;
-    color: #2e1b2b;
-}
-
-.allpage {
-    height: 100vh;
-    scroll-snap-align: start;
-    padding: 20px;  /* Ajout d'un petit padding */
-    box-sizing: border-box;
-}
 /* Expérience - Design élégant */
 .section {
     display: flex;
