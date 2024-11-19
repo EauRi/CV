@@ -186,37 +186,42 @@ body {
     text-decoration: none;
 }
 
-/* Bouton menu hamburger (caché par défaut sur les grands écrans) */
+/* Bouton menu hamburger */
 .menu-toggle {
-    display: none;
+    display: none; /* Caché par défaut */
     background: none;
     border: none;
-    color: #d1a575; /* Couleur des liens */
-    font-size: 1.5rem;
+    color: #d1a575; /* Couleur similaire aux liens */
+    font-size: 1.5rem; /* Taille adaptée pour une bonne visibilité */
     cursor: pointer;
 }
 
-/* Ajustements pour la responsivité */
+/* Responsive: Cacher les liens et afficher le menu hamburger sur petit écran */
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Affiche le bouton hamburger */
+    }
+
     .navbar ul {
         display: none; /* Cache le menu par défaut */
-        flex-direction: column; /* Aligne verticalement les éléments */
-        gap: 1rem;
+        flex-direction: column; /* Aligne les liens verticalement */
         background-color: #2e1b2b; /* Même couleur que la navbar */
         position: absolute;
-        top: 100%; /* Positionne sous la navbar */
+        top: 100%; /* Positionne le menu juste en dessous de la navbar */
         left: 0;
-        right: 0;
-        padding: 1rem;
-        border-top: 2px solid black;
+        width: 100%; /* Occupe toute la largeur de l'écran */
+        padding: 1rem 0;
+        gap: 1rem; /* Espacement entre les liens */
+        border-top: 1px solid black; /* Sépare visuellement la navbar du menu */
     }
 
     .navbar ul.active {
-        display: flex; /* Affiche le menu lorsqu'il est actif */
+        display: flex; /* Affiche le menu quand il est activé */
     }
 
-    .menu-toggle {
-        display: block; /* Affiche le bouton hamburger sur petits écrans */
+    .navbar ul li a {
+        padding: 0.5rem 1rem; /* Ajoute un espacement pour cliquer plus facilement */
+        text-align: center; /* Centre le texte des liens */
     }
 }
 
