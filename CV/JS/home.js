@@ -53,13 +53,6 @@ function createKeywords(language) {
   container.classList.add('keywords-container');
   document.body.appendChild(container);
 
-  // Appliquer du style pour positionner correctement le cercle
-  container.style.position = 'relative';
-  container.style.width = '100%';
-  container.style.height = '300px'; // Ajustez la taille du conteneur
-  container.style.marginTop = '50px'; // Ajouter un peu d'espace avant le cercle
-  container.style.textAlign = 'center';
-
   // Rayon du cercle
   const radius = 150; 
   const totalKeywords = keywords.length;
@@ -87,7 +80,6 @@ function createKeywords(language) {
     keywordElement.style.transform = `rotate(${angle}deg)`;
     keywordElement.style.fontSize = '14px'; // Ajustez la taille du texte
     keywordElement.style.backgroundColor = 'rgba(200, 94, 249, 0.36)';
-    keywordElement.style.borderRadius = '5px';
     keywordElement.style.color = 'rgb(212, 163, 115)';
   });
 }
