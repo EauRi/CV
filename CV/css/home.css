@@ -91,7 +91,7 @@ body {
 
 .hero-text h2 {
     font-size: 24px;
-    color: #d4a373;
+    color: rgb(212, 163, 115);
 }
 
 /* Container du cercle de mots-clés */
@@ -115,7 +115,6 @@ body {
     font-weight: 500;
     padding: 10px 20px;
     border-radius: 30px;
-    box-shadow: 0 4px 6px rgba(200, 94, 249, 0.36); /* Ombre douce autour de chaque mot */
     transform-origin: center center;
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
     text-transform: capitalize;
