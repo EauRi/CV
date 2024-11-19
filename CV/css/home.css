@@ -39,14 +39,13 @@ body {
     outline: none;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
-
 .hero-section {
-    position: relative;
+    position: relative; /* Crucial pour positionner les mots-clés */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 60vh;
+    height: 100vh; /* Utilisation d'une hauteur pleine de l'écran */
     background: #2d1b28;
     color: white;
     text-align: center;
@@ -54,34 +53,9 @@ body {
 }
 
 .hero-text {
-    z-index: 2; /* Ensures the hero text stays on top */
+    z-index: 2; /* Pour que le texte soit au-dessus des mots-clés */
 }
 
-.hero-text h1 {
-    font-size: 48px;
-    font-weight: bold;
-}
-
-.hero-text h2 {
-    font-size: 24px;
-    color: #d4a373;
-}
-/* Conteneur principal */
-.hero-section {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 60vh;
-    background: #2d1b28;
-    color: white;
-    text-align: center;
-    padding: 40px;
-    height: 100vh;
-}
-
-/* Style du texte principal */
 .hero-text h1 {
     font-size: 48px;
     font-weight: bold;
@@ -93,6 +67,7 @@ body {
     color: #d4a373;
 }
 
+/* Style des mots-clés */
 .keyword {
     position: absolute;
     padding: 10px;
