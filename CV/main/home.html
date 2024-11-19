@@ -8,6 +8,7 @@
     <script src="../JSon/lang.json" defer></script>
     <script src="../JS/langue.js" defer></script>
     <script src="../JS/mots.js" defer></script>
+    <script src="../JS/navbar.js" defer></script>
     <link rel="shortcut icon" type="image/png" href="../Image/AE.png"/>
 </head>
 <body>
@@ -17,7 +18,8 @@
             <button id="fr-button" onclick="setLanguage('fr')">FR</button>
             <button id="en-button" onclick="setLanguage('en')">EN</button>
         </div>
-        <nav>
+        <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+        <nav class="navbar-menu">
             <ul>
                 <li><a href="#experiences" data-key="menu_experiences"></a></li>
                 <li><a href="#qualifications" data-key="menu_qualifications"></a></li>

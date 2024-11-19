@@ -186,6 +186,40 @@ body {
     text-decoration: none;
 }
 
+/* Bouton menu hamburger (caché par défaut sur les grands écrans) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #d1a575; /* Couleur des liens */
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Ajustements pour la responsivité */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none; /* Cache le menu par défaut */
+        flex-direction: column; /* Aligne verticalement les éléments */
+        gap: 1rem;
+        background-color: #2e1b2b; /* Même couleur que la navbar */
+        position: absolute;
+        top: 100%; /* Positionne sous la navbar */
+        left: 0;
+        right: 0;
+        padding: 1rem;
+        border-top: 2px solid black;
+    }
+
+    .navbar ul.active {
+        display: flex; /* Affiche le menu lorsqu'il est actif */
+    }
+
+    .menu-toggle {
+        display: block; /* Affiche le bouton hamburger sur petits écrans */
+    }
+}
+
 .contact-button {
     padding: 0.5rem 1rem;
     color: #d1a575;
