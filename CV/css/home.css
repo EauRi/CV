@@ -139,6 +139,7 @@ body::after {
 }
 
 /* Navbar */
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -157,11 +158,34 @@ body::after {
 .navbar ul {
     display: flex;
     gap: 1.5rem;
+    flex-wrap: wrap; /* Permet aux éléments de se réorganiser s'il n'y a pas assez de place */
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    flex: 1 1 auto; /* Permet aux éléments de se redimensionner, avec une largeur minimale */
+    min-width: 150px; /* Largeur minimale avant de se wrap */
 }
 
 .navbar ul li a {
     color: #d1a575;
     text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+/* Responsivité : pour les petits écrans */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /* Passe les éléments en colonne sur petits écrans */
+        align-items: center; /* Centre les éléments */
+        gap: 1rem; /* Espace entre les éléments */
+    }
+
+    .navbar ul li {
+        min-width: 100%; /* Assure que chaque élément prend toute la largeur */
+    }
 }
 
 .contact-button {
