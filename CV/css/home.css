@@ -220,6 +220,12 @@ body::after {
     color: #2e1b2b;
 }
 
+.allpage {
+    height: 100vh;
+    scroll-snap-align: start;
+    padding: 20px;  /* Ajout d'un petit padding */
+    box-sizing: border-box;
+}
 /* Expérience - Design élégant */
 .section {
     display: flex;
