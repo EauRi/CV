@@ -1,3 +1,14 @@
+// Fonction pour charger les traductions depuis un fichier JSON en fonction de la langue
+function loadTranslations(language) {
+  fetch(`../JSon/lang.json`)
+    .then(response => response.json())
+    .then(data => {
+      translations = data;  // Stocke les traductions
+      applyTranslations(language);  // Applique les traductions après le chargement
+      createKeywords(language);  // Crée les mots-clés en cercle à la fin de la page
+    })
+    .catch(error => console.error("Erreur lors du chargement des traductions:", error));
+}
 
 // Fonction pour créer et positionner les mots-clés en cercle à la fin de la page
 function createKeywords() {
