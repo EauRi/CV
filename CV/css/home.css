@@ -100,7 +100,13 @@ body::after {
         font-size: 0.8rem;
     }
     .navbar {
+        padding: 0 0.5rem; /* Réduit l'espace sur les côtés */
         height: 85px; /* Augmente la hauteur pour les petits écrans */
+    }
+    .contact-button, .language-switcher button {
+        font-size: 0.8rem; /* Réduction de la taille du texte */
+        padding: 0.3rem 0.7rem; /* Réduction des marges internes */
+        max-width: 100px; /* Limite stricte de largeur */
     }
 }
 
@@ -108,6 +114,7 @@ body::after {
     .navbar ul li a {
         font-size: 0.7rem;
     }
+    
 }
 
 /* Responsivité : Ajuste l'espace réservé pour les petits écrans */
@@ -133,9 +140,11 @@ body::after {
 }
 
 .language-switcher button, .contact-button {
-    max-width: 100%; /* Empêche les boutons de déborder */
+    max-width: 90%; /* Empêche les boutons de déborder */
     box-sizing: border-box; /* Inclus padding/border dans la largeur totale */
-    margin: 0; /* Supprime les marges externes */
+    padding: 0.5rem 1rem;
+    margin: 0; /* Supprime toute marge externe */
+    white-space: nowrap; /* Empêche les mots de se couper */
 }
 
 .contact-button {
