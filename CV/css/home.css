@@ -10,6 +10,13 @@ body {
     color: #ffffff;
     background-color: #2e1b2b;
 }
+
+body::after {
+    content: "";
+    display: block;
+    height: 200px; 
+}
+
 .language-switcher {
     display: flex;
     justify-content: center;
@@ -83,21 +90,6 @@ body {
     line-height: 1.5;
 }
 
-/* Conteneur principal */
-.hero-section {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 60vh;
-    background: #2d1b28;
-    color: white;
-    text-align: center;
-    padding: 40px;
-    height: 100vh;
-}
-
 /* Container du cercle de mots-clés */
 .keywords-container {
     position: relative;
@@ -110,10 +102,10 @@ body {
     align-items: center;
     border-radius: 50%;
     overflow: hidden;
-    }
+}
 
-    /* Style de chaque mot-clé */
-    .keyword {
+/* Style de chaque mot-clé */
+.keyword {
     position: absolute;
     font-weight: 500;
     padding: 10px 20px;
@@ -121,15 +113,14 @@ body {
     transform-origin: center center;
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
     text-transform: capitalize;
-    }
+}
 
-    /* Animation de rotation douce du cercle */
-    .keywords-container {
+/* Animation de rotation douce du cercle */
+.keywords-container {
     animation: rotate-circle 20s infinite linear;
-    }
-
-    /* Animation pour faire tourner les mots en cercle */
-    @keyframes rotate-circle {
+}
+/* Animation pour faire tourner les mots en cercle */
+@keyframes rotate-circle {
     from {
         transform: rotate(0deg);
     }
@@ -137,7 +128,6 @@ body {
         transform: rotate(360deg);
     }
 }
-
 
 .page {
     height: 100vh;
@@ -164,7 +154,6 @@ body {
     border-bottom: 2px solid black;
 }
 
-
 .navbar ul {
     display: flex;
     gap: 1.5rem;
@@ -173,45 +162,6 @@ body {
 .navbar ul li a {
     color: #d1a575;
     text-decoration: none;
-}
-
-/* Bouton menu hamburger */
-.menu-toggle {
-    display: none; /* Caché par défaut */
-    background: none;
-    border: none;
-    color: #d1a575; /* Couleur similaire aux liens */
-    font-size: 1.5rem; /* Taille adaptée pour une bonne visibilité */
-    cursor: pointer;
-}
-
-/* Responsive: Cacher les liens et afficher le menu hamburger sur petit écran */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Affiche le bouton hamburger */
-    }
-
-    .navbar ul {
-        display: none; /* Cache le menu par défaut */
-        flex-direction: column; /* Aligne les liens verticalement */
-        background-color: #2e1b2b; /* Même couleur que la navbar */
-        position: absolute;
-        top: 100%; /* Positionne le menu juste en dessous de la navbar */
-        left: 0;
-        width: 100%; /* Occupe toute la largeur de l'écran */
-        padding: 1rem 0;
-        gap: 1rem; /* Espacement entre les liens */
-        border-top: 1px solid black; /* Sépare visuellement la navbar du menu */
-    }
-
-    .navbar ul.active {
-        display: flex; /* Affiche le menu quand il est activé */
-    }
-
-    .navbar ul li a {
-        padding: 0.5rem 1rem; /* Ajoute un espacement pour cliquer plus facilement */
-        text-align: center; /* Centre le texte des liens */
-    }
 }
 
 .contact-button {
@@ -226,17 +176,6 @@ body {
 .contact-button:hover {
     background-color: #d1a575;
     color: #2e1b2b;
-}
-
-/* Section Hero */
-.hero-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    background-image: linear-gradient(135deg, #2e1b2b 30%, #3e2b3c 70%);
-    padding: 2rem;
-    text-align: left;
 }
 
 /* Expérience - Design élégant */
@@ -457,8 +396,8 @@ body {
 
 /* Style pour les petits cercles */
 .small-circle {
-    width: 85px; /* Diamètre */
-    height: 85px; /* Diamètre */
+    width: 95px; /* Diamètre */
+    height: 95px; /* Diamètre */
     border: solid 2px black;
     border-radius: 50%; /* Cercle parfait */
     background-color: #f0f0f049; /* Couleur de fond */
@@ -654,10 +593,4 @@ body {
     .portfolio-box a {
         font-size: 0.9rem;
     }
-}
-
-body::after {
-    content: "";
-    display: block;
-    height: 200px; 
 }
