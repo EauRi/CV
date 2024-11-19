@@ -139,7 +139,6 @@ body::after {
 }
 
 /* Navbar */
-/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -171,7 +170,6 @@ body::after {
 .navbar ul li a {
     color: #d1a575;
     text-decoration: none;
-    padding: 0.5rem 1rem;
     display: block;
 }
 
