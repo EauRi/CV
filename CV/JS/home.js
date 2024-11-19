@@ -89,3 +89,24 @@ document.addEventListener("DOMContentLoaded", function() {
   // Appel initial pour charger la langue par défaut (français)
   loadTranslations('fr');
 });
+
+//Pour les boutons switchs
+function setLanguage(language) {
+    // Sélectionne les boutons
+    const frButton = document.getElementById('fr-button');
+    const enButton = document.getElementById('en-button');
+
+    // Réinitialise les deux boutons
+    frButton.classList.remove('selected');
+    enButton.classList.remove('selected');
+
+    // Applique la classe 'selected' au bouton correspondant
+    if (language === 'fr') {
+        frButton.classList.add('selected');
+    } else {
+        enButton.classList.add('selected');
+    }
+
+    // Logique pour changer la langue (par exemple, modifier le texte ou rediriger)
+    // setLanguageTo(language); // Exemple de fonction pour définir la langue
+}

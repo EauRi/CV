@@ -40,6 +40,12 @@ body {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
+.language-switcher button.selected {
+    background-color: #d1a575;
+    color: white;
+    border: 2px solid #d1a575;
+}
+
 .hero-section {
     position: relative;
     display: flex;
