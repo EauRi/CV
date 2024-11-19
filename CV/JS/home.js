@@ -6,10 +6,9 @@ function loadTranslations(language) {
   fetch(`../JSon/lang.json`)
     .then(response => response.json())
     .then(data => {
-      translations = data; // Stocke les traductions
-      applyTranslations(language); // Applique les traductions après le chargement
-      createKeywords(language); // Crée les mots-clés en cercle à la fin de la page
-      updateButtonState(language); // Met à jour l'état des boutons
+      translations = data;  // Stocke les traductions
+      applyTranslations(language);  // Applique les traductions après le chargement
+      createKeywords(language);  // Crée les mots-clés en cercle à la fin de la page
     })
     .catch(error => console.error("Erreur lors du chargement des traductions:", error));
 }
@@ -21,14 +20,17 @@ function applyTranslations(language) {
   keys.forEach((element) => {
     const key = element.getAttribute('data-key');
     if (translations[language] && translations[language][key]) {
-      element.textContent = translations[language][key]; // Remplace le texte par la traduction
+      element.textContent = translations[language][key];  // Remplace le texte par la traduction
     }
   });
 }
 
-// Fonction pour mettre à jour l'état des boutons (FR/EN)
-function updateButtonState(language) {
-  // Sélectionne les boutons
+// Fonction pour changer la langue et mettre à jour les boutons
+function setLanguage(language) {
+  // Appeler les fonctions de traduction
+  loadTranslations(language);
+
+  // Gérer l'apparence des boutons
   const frButton = document.getElementById('fr-button');
   const enButton = document.getElementById('en-button');
 
@@ -44,18 +46,11 @@ function updateButtonState(language) {
   }
 }
 
-// Fonction principale pour changer de langue
-function setLanguage(language) {
-  // Charge les traductions et met à jour l'état des boutons
-  loadTranslations(language);
-}
-
-// Chargement initial de la langue par défaut
+// Charger une langue par défaut (par exemple, 'fr') au démarrage
 document.addEventListener('DOMContentLoaded', () => {
-  const defaultLanguage = 'fr'; // Vous pouvez ajuster cette valeur
+  const defaultLanguage = 'fr'; // Remplacez par la langue par défaut de votre choix
   setLanguage(defaultLanguage);
 });
-
 
 // Fonction pour créer et positionner les mots-clés en cercle à la fin de la page
 function createKeywords(language) {
