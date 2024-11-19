@@ -162,6 +162,7 @@ body {
     left: 0;           /* Aligne à gauche */
     width: 100%;       /* Assure que l'en-tête prend toute la largeur de la page */
     z-index: 1000; 
+    box-shadow: 0 2px 2px -2px black;
 }
 
 
