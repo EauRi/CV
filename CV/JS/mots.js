@@ -1,4 +1,11 @@
-// Fonction pour charger les traductions depuis un fichier JSON en fonction de la langue
+// Fonction pour créer et positionner les mots-clés en cercle à la fin de la page
+function createKeywords() {
+  // Vérifie si un conteneur de mots-clés existe déjà
+  if (document.querySelector('.keywords-container')) {
+      return; // Si le conteneur existe, sortir de la fonction
+  }
+
+  // Fonction pour charger les traductions depuis un fichier JSON en fonction de la langue
 function loadTranslations(language) {
   fetch(`../JSon/lang.json`)
     .then(response => response.json())
@@ -9,14 +16,7 @@ function loadTranslations(language) {
     })
     .catch(error => console.error("Erreur lors du chargement des traductions:", error));
 }
-
-// Fonction pour créer et positionner les mots-clés en cercle à la fin de la page
-function createKeywords() {
-  // Vérifie si un conteneur de mots-clés existe déjà
-  if (document.querySelector('.keywords-container')) {
-      return; // Si le conteneur existe, sortir de la fonction
-  }
-  
+ 
   // Récupère les mots-clés de la langue sélectionnée
   const keywords = [
       translations['fr'].keyword_office_365,
