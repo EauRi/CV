@@ -48,6 +48,19 @@ function createKeywords(language) {
     translations[language].keyword_polyvalente,
   ];
 
+  // Cibler la div contenant le titre et le sous-titre
+  const heroText = document.querySelector('.hero-text');
+  
+  if (!heroText) {
+    console.error("La div .hero-text n'a pas été trouvée.");
+    return;
+  }
+
+  // Récupérer les dimensions et la position de .hero-text
+  const heroTextRect = heroText.getBoundingClientRect();
+  const heroTextCenterX = heroTextRect.left + heroTextRect.width / 2;
+  const heroTextCenterY = heroTextRect.top + heroTextRect.height / 2;
+
   // Cibler le conteneur des mots-clés (la div .grid)
   const container = document.querySelector('.grid');
   
@@ -79,12 +92,11 @@ function createKeywords(language) {
 
     // Appliquer la position avec une transformation CSS
     keywordElement.style.position = 'absolute';
-    keywordElement.style.left = '50%';
-    keywordElement.style.top = '50%';
-    keywordElement.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px)`;
+    keywordElement.style.left = `calc(50% + ${x}px)`;
+    keywordElement.style.top = `calc(50% + ${y}px)`;
 
     // Rotation de chaque mot-clé pour qu'il soit lisible
-    keywordElement.style.transform += ` rotate(${angle}deg)`;
+    keywordElement.style.transform = `rotate(${angle}deg)`;
   });
 }
 

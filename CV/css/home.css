@@ -50,12 +50,12 @@ body {
     background: #2d1b28;
     color: white;
     text-align: center;
-    padding: 40px;
+    padding-top: 100px;
 }
 
 .hero-text {
     position: relative;
-    z-index: 2; /* Ensures the hero text stays on top */
+    z-index: 1; /* Ensures the hero text stays on top */
 }
 
 .hero-text h1 {
@@ -96,13 +96,13 @@ body {
 
 .keyword {
     position: absolute;
-    padding: 10px;
-    background-color: #f0f0f0;
+    font-size: 14px; /* Ajustez la taille du texte */
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    font-size: 14px;
-    color: #333;
-    transition: transform 0.3s ease;
-    text-align: center;
+    color: white;
+    transform-origin: center;
+    pointer-events: all; /* Permet d'interagir avec les mots-clés */
 }
 
 .grid {
