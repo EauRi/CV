@@ -21,7 +21,7 @@ body::after {
 
 /* Sections individuelles (les "pages") */
 .allpage {
-    height: 100vh; /* Chaque section occupe la hauteur de l'écran */
+    min-height: 100vh; /* Chaque section occupe la hauteur de l'écran */
 }
 
 /* Navbar */
