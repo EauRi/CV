@@ -8,7 +8,7 @@ function loadTranslations(language) {
     .then(data => {
       translations = data;  // Stocke les traductions
       applyTranslations(language);  // Applique les traductions après le chargement
-      createKeywords(language);  // Crée les mots-clés en cercle autour du titre
+      createKeywords(language);  // Crée les mots-clés en cercle à la fin de la page
     })
     .catch(error => console.error("Erreur lors du chargement des traductions:", error));
 }
@@ -25,7 +25,7 @@ function applyTranslations(language) {
   });
 }
 
-// Fonction pour créer et positionner les mots-clés en cercle autour du titre
+// Fonction pour créer et positionner les mots-clés en cercle à la fin de la page
 function createKeywords(language) {
   // Récupère les mots-clés de la langue sélectionnée
   const keywords = [
@@ -48,29 +48,17 @@ function createKeywords(language) {
     translations[language].keyword_polyvalente,
   ];
 
-  // Cibler la div contenant le titre et le sous-titre
-  const heroText = document.querySelector('.hero-text');
-  
-  if (!heroText) {
-    console.error("La div .hero-text n'a pas été trouvée.");
-    return;
-  }
+  // Créer un conteneur pour les mots-clés et l'ajouter à la fin de la page
+  const container = document.createElement('div');
+  container.classList.add('keywords-container');
+  document.body.appendChild(container);
 
-  // Récupérer les dimensions et la position de .hero-text
-  const heroTextRect = heroText.getBoundingClientRect();
-  const heroTextCenterX = heroTextRect.left + heroTextRect.width / 2;
-  const heroTextCenterY = heroTextRect.top + heroTextRect.height / 2;
-
-  // Cibler le conteneur des mots-clés (la div .grid)
-  const container = document.querySelector('.grid');
-  
-  if (!container) {
-    console.error("Le conteneur des mots-clés n'a pas été trouvé.");
-    return;
-  }
-
-  // Vider le conteneur avant d'ajouter les mots-clés
-  container.innerHTML = '';
+  // Appliquer du style pour positionner correctement le cercle
+  container.style.position = 'relative';
+  container.style.width = '100%';
+  container.style.height = '300px'; // Ajustez la taille du conteneur
+  container.style.marginTop = '50px'; // Ajouter un peu d'espace avant le cercle
+  container.style.textAlign = 'center';
 
   // Rayon du cercle
   const radius = 150; 
@@ -97,6 +85,11 @@ function createKeywords(language) {
 
     // Rotation de chaque mot-clé pour qu'il soit lisible
     keywordElement.style.transform = `rotate(${angle}deg)`;
+    keywordElement.style.fontSize = '14px'; // Ajustez la taille du texte
+    keywordElement.style.padding = '5px';
+    keywordElement.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
+    keywordElement.style.borderRadius = '5px';
+    keywordElement.style.color = 'white';
   });
 }
 
