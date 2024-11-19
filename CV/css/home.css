@@ -19,18 +19,9 @@ body::after {
     height: 200px; 
 }
 
-/* Appliquer le snapping à un conteneur parent */
-.snap-container {
-    scroll-snap-type: y mandatory; /* Activer le snapping vertical */
-    height: 100vh; /* Conteneur couvre toute la hauteur de la fenêtre */
-    overflow-y: scroll; /* Permettre le défilement */
-}
-
 /* Sections individuelles (les "pages") */
 .allpage {
     height: 100vh; /* Chaque section occupe la hauteur de l'écran */
-    scroll-snap-align: start; /* Commence chaque page en haut */
-    transition: transform 0.5s ease-in-out;
 }
 
 /* Navbar */
