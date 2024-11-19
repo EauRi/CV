@@ -111,7 +111,6 @@ body {
     /* Style de chaque mot-clé */
     .keyword {
     position: absolute;
-    font-size: 16px;
     font-weight: 500;
     padding: 10px 20px;
     border-radius: 30px;
