@@ -32,3 +32,35 @@ function setLanguage(language) {
 
 // Appel initial pour charger la langue par défaut (français)
 loadTranslations('fr');
+
+
+// Fonction pour créer et positionner les mots-clés
+function createKeywords(keywords) {
+    const container = document.querySelector('.keywords-container');
+    const radius = 150; // Rayon du cercle pour les mots-clés
+    const totalKeywords = keywords.length;
+
+    // Ajouter chaque mot-clé
+    keywords.forEach((keyword, index) => {
+        const keywordElement = document.createElement('div');
+        keywordElement.classList.add('keyword');
+        keywordElement.textContent = keyword;
+        container.appendChild(keywordElement);
+
+        // Calculer l'angle de chaque mot-clé sur le cercle
+        const angle = (360 / totalKeywords) * index;
+
+        // Positionner chaque mot-clé sur le cercle
+        const x = radius * Math.cos((angle - 90) * Math.PI / 180); // -90 pour ajuster l'angle de départ
+        const y = radius * Math.sin((angle - 90) * Math.PI / 180);
+
+        // Appliquer la position avec une transformation CSS
+        keywordElement.style.position = 'absolute';
+        keywordElement.style.left = `50%`;
+        keywordElement.style.top = `50%`;
+        keywordElement.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px)`;
+
+        // Rotation de chaque mot-clé pour qu'il soit lisible
+        keywordElement.style.transform += ` rotate(${angle}deg)`;
+    });
+}
