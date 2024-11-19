@@ -48,7 +48,7 @@ function createKeywords(language) {
     translations[language].keyword_polyvalente,
   ];
 
-  // Cibler le conteneur des mots-clés
+  // Cibler le conteneur des mots-clés (la div .grid)
   const container = document.querySelector('.grid');
   
   if (!container) {
