@@ -73,6 +73,15 @@ body {
     font-size: 24px;
     color: #d4a373;
 }
+
+.hero-text h3 {
+    font-size: 18px;
+    font-style: italic;
+    color: #6c757d; /* Gris doux pour un contraste subtil */
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
 /* Conteneur principal */
 .hero-section {
     position: relative;

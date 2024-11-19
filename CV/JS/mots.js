@@ -3,19 +3,19 @@
 function createKeywords() {
     // Récupère les mots-clés de la langue sélectionnée
     const keywords = [
-      translations[fr].keyword_office_365,
-      translations[fr].keyword_vscode,
-      translations[fr].keyword_eclipse,
-      translations[fr].keyword_jetbrains,
-      translations[fr].keyword_c,
-      translations[fr].keyword_cpp,
-      translations[fr].keyword_java,
-      translations[fr].keyword_html,
-      translations[fr].keyword_css,
-      translations[fr].keyword_javascript,
-      translations[fr].keyword_python,
-      translations[fr].keyword_sql,
-      translations[fr].keyword_git,
+      translations['fr'].keyword_office_365,
+      translations['fr'].keyword_vscode,
+      translations['fr'].keyword_eclipse,
+      translations['fr'].keyword_jetbrains,
+      translations['fr'].keyword_c,
+      translations['fr'].keyword_cpp,
+      translations['fr'].keyword_java,
+      translations['fr'].keyword_html,
+      translations['fr'].keyword_css,
+      translations['fr'].keyword_javascript,
+      translations['fr'].keyword_python,
+      translations['fr'].keyword_sql,
+      translations['fr'].keyword_git,
     ];
   
     // Créer un conteneur pour les mots-clés et l'ajouter à la fin de la page
