@@ -182,7 +182,6 @@ body::after {
 }
 
 .hero-section {
-    padding-top: 80px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -192,6 +191,7 @@ body::after {
     color: white;
     text-align: left;
     padding: 40px;
+    margin-top: 30%;
 }
 
 .hero-text {
