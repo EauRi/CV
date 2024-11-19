@@ -42,10 +42,6 @@ function createKeywords(language) {
     translations[language].keyword_python,
     translations[language].keyword_sql,
     translations[language].keyword_git,
-    translations[language].keyword_curieuse,
-    translations[language].keyword_autonome,
-    translations[language].keyword_perseverante,
-    translations[language].keyword_polyvalente,
   ];
 
   // Créer un conteneur pour les mots-clés et l'ajouter à la fin de la page
