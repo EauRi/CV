@@ -139,58 +139,70 @@ body::after {
     padding: 20px;
 }
 
-/* Navbar */
+//* Navbar */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;  /* Distribue l'espace entre les éléments */
     align-items: center;
     padding: 1rem 2rem;
     background-color: #2e1b2b;
-    position: fixed;   /* Fixe l'élément en haut de la page */
-    top: 0;            /* Positionne l'élément en haut de la fenêtre */
-    left: 0;           /* Aligne à gauche */
-    width: 100%;       /* Assure que l'en-tête prend toute la largeur de la page */
-    z-index: 1000; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     box-shadow: 0 2px 2px -2px black;
     border-bottom: 2px solid black;
+}
+
+.navbar .language-switcher {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.navbar nav {
+    flex: 1; /* La partie nav prendra toute la largeur disponible */
+    display: flex;
+    justify-content: center; /* Centre les éléments dans la nav */
 }
 
 .navbar ul {
     display: flex;
     gap: 1.5rem;
-    flex-wrap: wrap; /* Permet aux éléments de se réorganiser s'il n'y a pas assez de place */
     padding: 0;
     margin: 0;
+    justify-content: center; /* Assure que les éléments de la liste sont centrés */
 }
 
 .navbar ul li {
-    flex: 1 1 auto; /* Permet aux éléments de se redimensionner, avec une largeur minimale */
-    min-width: 150px; /* Largeur minimale avant de se wrap */
+    list-style: none; /* Supprime les puces des éléments li */
 }
 
 .navbar ul li a {
     color: #d1a575;
     text-decoration: none;
+    padding: 0.5rem 1rem;
     display: block;
-    font-size: 1rem; /* Taille de la police par défaut */
+    text-align: center; /* Centre le texte dans chaque lien */
 }
 
 /* Responsivité : Réduire la taille du texte sur des écrans plus petits */
 @media (max-width: 1024px) {
     .navbar ul li a {
-        font-size: 0.9rem; /* Réduit la taille du texte pour les écrans de moins de 1024px */
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 768px) {
     .navbar ul li a {
-        font-size: 0.8rem; /* Réduit davantage la taille du texte pour les écrans de moins de 768px */
+        font-size: 0.8rem;
     }
 }
 
 @media (max-width: 480px) {
     .navbar ul li a {
-        font-size: 0.7rem; /* Encore plus petit sur les écrans très petits (ex. smartphones) */
+        font-size: 0.7rem;
     }
 }
 
