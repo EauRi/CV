@@ -62,8 +62,9 @@ body::after {
     height: 60vh;
     background: #2d1b28;
     color: white;
-    text-align: center;
-    padding-top: 100px;
+    text-align: left;
+    padding: 40px;
+    height: 100vh;
 }
 
 .hero-text {
