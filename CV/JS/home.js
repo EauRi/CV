@@ -6,9 +6,10 @@ function loadTranslations(language) {
   fetch(`../JSon/lang.json`)
     .then(response => response.json())
     .then(data => {
-      translations = data;  // Stocke les traductions
-      applyTranslations(language);  // Applique les traductions après le chargement
-      createKeywords(language);  // Crée les mots-clés en cercle à la fin de la page
+      translations = data; // Stocke les traductions
+      applyTranslations(language); // Applique les traductions après le chargement
+      createKeywords(language); // Crée les mots-clés en cercle à la fin de la page
+      updateButtonState(language); // Met à jour l'état des boutons
     })
     .catch(error => console.error("Erreur lors du chargement des traductions:", error));
 }
@@ -20,10 +21,41 @@ function applyTranslations(language) {
   keys.forEach((element) => {
     const key = element.getAttribute('data-key');
     if (translations[language] && translations[language][key]) {
-      element.textContent = translations[language][key];  // Remplace le texte par la traduction
+      element.textContent = translations[language][key]; // Remplace le texte par la traduction
     }
   });
 }
+
+// Fonction pour mettre à jour l'état des boutons (FR/EN)
+function updateButtonState(language) {
+  // Sélectionne les boutons
+  const frButton = document.getElementById('fr-button');
+  const enButton = document.getElementById('en-button');
+
+  // Réinitialise les deux boutons
+  frButton.classList.remove('selected');
+  enButton.classList.remove('selected');
+
+  // Applique la classe 'selected' au bouton correspondant
+  if (language === 'fr') {
+    frButton.classList.add('selected');
+  } else {
+    enButton.classList.add('selected');
+  }
+}
+
+// Fonction principale pour changer de langue
+function setLanguage(language) {
+  // Charge les traductions et met à jour l'état des boutons
+  loadTranslations(language);
+}
+
+// Chargement initial de la langue par défaut
+document.addEventListener('DOMContentLoaded', () => {
+  const defaultLanguage = 'fr'; // Vous pouvez ajuster cette valeur
+  setLanguage(defaultLanguage);
+});
+
 
 // Fonction pour créer et positionner les mots-clés en cercle à la fin de la page
 function createKeywords(language) {
@@ -77,36 +109,4 @@ function createKeywords(language) {
     keywordElement.style.backgroundColor = 'rgba(200, 94, 249, 0.36)';
     keywordElement.style.color = 'rgb(212, 163, 115)';
   });
-}
-
-// Fonction pour changer la langue et appliquer les traductions
-function setLanguage(language) {
-  loadTranslations(language);  // Charge et applique les traductions en fonction de la langue
-}
-
-// Assurez-vous que le DOM est chargé avant d'exécuter le script
-document.addEventListener("DOMContentLoaded", function() {
-  // Appel initial pour charger la langue par défaut (français)
-  loadTranslations('fr');
-});
-
-//Pour les boutons switchs
-function setLanguage(language) {
-    // Sélectionne les boutons
-    const frButton = document.getElementById('fr-button');
-    const enButton = document.getElementById('en-button');
-
-    // Réinitialise les deux boutons
-    frButton.classList.remove('selected');
-    enButton.classList.remove('selected');
-
-    // Applique la classe 'selected' au bouton correspondant
-    if (language === 'fr') {
-        frButton.classList.add('selected');
-    } else {
-        enButton.classList.add('selected');
-    }
-
-    // Logique pour changer la langue (par exemple, modifier le texte ou rediriger)
-    // setLanguageTo(language); // Exemple de fonction pour définir la langue
 }
