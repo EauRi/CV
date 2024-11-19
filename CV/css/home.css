@@ -54,6 +54,7 @@ body {
 }
 
 .hero-text {
+    position: relative;
     z-index: 2; /* Ensures the hero text stays on top */
 }
 
@@ -101,6 +102,20 @@ body {
     font-size: 14px;
     color: #333;
     transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.grid {
+    position: absolute;
+    top: 50%; /* Centre les mots-clés autour du titre */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrage parfait */
+    width: 300px; /* Ajustez la taille selon vos besoins */
+    height: 300px; /* Ajustez la taille selon vos besoins */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .page {
