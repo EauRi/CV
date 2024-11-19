@@ -30,11 +30,7 @@ body::after {
 .allpage {
     height: 100vh; /* Chaque section occupe la hauteur de l'écran */
     scroll-snap-align: start; /* Commence chaque page en haut */
-    display: flex; /* Centrage du contenu */
-    justify-content: center;
-    align-items: center;
     transition: transform 0.5s ease-in-out;
-    background-color: #2e1b2b; /* Couleur de fond par défaut */
 }
 
 /* Navbar */
