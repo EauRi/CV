@@ -8,7 +8,6 @@ function loadTranslations(language) {
     .then(data => {
       translations = data;  // Stocke les traductions
       applyTranslations(language);  // Applique les traductions après le chargement
-      createKeywords(language);  // Crée les mots-clés en cercle à la fin de la page
     })
     .catch(error => console.error("Erreur lors du chargement des traductions:", error));
 }
@@ -25,70 +24,56 @@ function applyTranslations(language) {
   });
 }
 
-// Fonction pour créer et positionner les mots-clés en cercle à la fin de la page
-function createKeywords(language) {
-    // Récupère les mots-clés de la langue sélectionnée
-    const keywords = [
-      translations[language].keyword_office_365,
-      translations[language].keyword_vscode,
-      translations[language].keyword_eclipse,
-      translations[language].keyword_jetbrains,
-      translations[language].keyword_c,
-      translations[language].keyword_cpp,
-      translations[language].keyword_java,
-      translations[language].keyword_html,
-      translations[language].keyword_css,
-      translations[language].keyword_javascript,
-      translations[language].keyword_python,
-      translations[language].keyword_sql,
-      translations[language].keyword_git,
-      translations[language].keyword_curieuse,
-      translations[language].keyword_autonome,
-      translations[language].keyword_perseverante,
-      translations[language].keyword_polyvalente,
-    ];
-  
-    // Créer un conteneur pour les mots-clés et l'ajouter à la fin de la page
-    const container = document.createElement('div');
-    container.classList.add('keywords-container');
-    document.body.appendChild(container);
-  
-    // Appliquer du style pour positionner correctement le cercle
-    container.style.position = 'relative';
-    container.style.width = '100%';
-    container.style.height = '300px'; // Ajustez la taille du conteneur
-    container.style.marginTop = '50px'; // Ajouter un peu d'espace avant le cercle
-    container.style.textAlign = 'center';
-  
-    // Calculer dynamiquement le rayon du cercle en fonction du nombre de mots
-    const totalKeywords = keywords.length;
-    const radius = Math.max(150, 150 + totalKeywords * 5); // Augmente le rayon en fonction du nombre de mots
-  
-    // Ajouter chaque mot-clé dans le conteneur
-    keywords.forEach((keyword, index) => {
-      const keywordElement = document.createElement('div');
-      keywordElement.classList.add('keyword');
-      keywordElement.textContent = keyword;
-      container.appendChild(keywordElement);
-  
-      // Calculer l'angle de chaque mot-clé sur le cercle
-      const angle = (360 / totalKeywords) * index;
-  
-      // Positionner chaque mot-clé sur le cercle avec un rayon ajusté
-      const x = radius * Math.cos((angle - 90) * Math.PI / 180); // -90 pour ajuster l'angle de départ
-      const y = radius * Math.sin((angle - 90) * Math.PI / 180);
-  
-      // Appliquer la position avec une transformation CSS
-      keywordElement.style.position = 'absolute';
-      keywordElement.style.left = `calc(50% + ${x}px)`;
-      keywordElement.style.top = `calc(50% + ${y}px)`;
-  
-      // Rotation de chaque mot-clé pour qu'il soit lisible
-      keywordElement.style.transform = `rotate(${angle}deg)`;
-      keywordElement.style.fontSize = '14px'; // Ajustez la taille du texte
-      keywordElement.style.padding = '5px';
-      keywordElement.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
-      keywordElement.style.borderRadius = '5px';
-      keywordElement.style.color = 'white';
-    });
-  }  
+// Fonction pour changer la langue et appliquer les traductions
+function setLanguage(language) {
+  loadTranslations(language);  // Charge et applique les traductions en fonction de la langue
+}
+
+// Fonction pour créer le cercle de mots-clés autour du titre
+function createKeywords() {
+  const keywordsData = [
+    'office_365', 'vscode', 'eclipse', 'jetbrains', 'c', 'cpp', 'java', 'html', 'css', 'javascript', 'python', 'sql', 'git', 'curieuse', 'autonome', 'perseverante', 'polyvalente'
+  ];
+
+  const container = document.querySelector('.hero-text');
+  if (!container) {
+    console.error("Le conteneur .hero-text n'a pas été trouvé.");
+    return;
+  }
+
+  const circleContainer = document.createElement('div');
+  circleContainer.classList.add('keywords-container');
+  container.appendChild(circleContainer); // Ajouter le cercle à l'intérieur de hero-text
+
+  const radius = 120; // Rayon du cercle (ajustez selon la taille souhaitée)
+  const totalKeywords = keywordsData.length;
+
+  // Calcul des angles pour espacer les mots-clés en cercle
+  const angleStep = (2 * Math.PI) / totalKeywords;
+
+  // Créer chaque mot-clé et le placer sur le cercle
+  keywordsData.forEach((keyword, index) => {
+    const keywordElement = document.createElement('div');
+    keywordElement.classList.add('keyword');
+    keywordElement.textContent = translations['fr'][`keyword_${keyword}`] || keyword; // Utilisez la traduction ou le mot par défaut
+
+    // Calcul de la position de chaque mot-clé
+    const angle = angleStep * index;
+    const x = radius * Math.cos(angle); // Coordonnée X
+    const y = radius * Math.sin(angle); // Coordonnée Y
+
+    // Positionner le mot-clé sur le cercle
+    keywordElement.style.position = 'absolute';
+    keywordElement.style.left = `calc(50% + ${x}px)`;
+    keywordElement.style.top = `calc(50% + ${y}px)`;
+
+    // Ajouter le mot-clé au conteneur du cercle
+    circleContainer.appendChild(keywordElement);
+  });
+}
+
+// Appel initial pour charger la langue par défaut (français)
+loadTranslations('fr');
+
+// Créer le cercle de mots-clés après le chargement des traductions
+window.addEventListener('load', createKeywords);
