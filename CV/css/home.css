@@ -67,6 +67,7 @@ body {
 .hero-text h1 {
     font-size: 48px;
     font-weight: bold;
+    color: rgb(245, 232, 214)smoke;
 }
 
 .hero-text h2 {
@@ -77,7 +78,7 @@ body {
 .hero-text h3 {
     font-size: 17px;
     font-style: italic;
-    color: #d4a373d5;
+    color: #a06f3fc3;
     margin-top: 10px;
     line-height: 1.5;
 }
