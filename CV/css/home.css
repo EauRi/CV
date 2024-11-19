@@ -31,7 +31,7 @@ body::after {
     display: flex;
     justify-content: space-between;  /* Distribue l'espace entre les éléments */
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0 1rem;
     background-color: #2e1b2b;
     top: 0;
     left: 0;
@@ -40,6 +40,7 @@ body::after {
     height: 85px;
     box-shadow: 0 2px 2px -2px black;
     border-bottom: 2px solid black;
+    box-sizing: border-box;
 }
 
 .navbar .language-switcher {
@@ -106,6 +107,10 @@ body::after {
     }
 }
 
+.language-switcher button, .contact-button {
+    max-width: 100%; /* Empêche les boutons de déborder */
+    box-sizing: border-box; /* Inclus padding/border dans la largeur totale */
+}
 .contact-button {
     padding: 0.5rem 1rem;
     color: #d1a575;
