@@ -151,6 +151,11 @@ body {
     align-items: center;
     padding: 1rem 2rem;
     background-color: #2e1b2b;
+    position: fixed;   /* Fixe l'élément en haut de la page */
+    top: 0;            /* Positionne l'élément en haut de la fenêtre */
+    left: 0;           /* Aligne à gauche */
+    width: 100%;       /* Assure que l'en-tête prend toute la largeur de la page */
+    z-index: 1000; 
 }
 
 
