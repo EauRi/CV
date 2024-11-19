@@ -15,7 +15,6 @@ function loadTranslations(language) {
 
 // Fonction pour appliquer les traductions sur la page
 function applyTranslations(language) {
-  // Applique les traductions aux éléments
   const keys = document.querySelectorAll('[data-key]');
   
   keys.forEach((element) => {
@@ -29,11 +28,34 @@ function applyTranslations(language) {
 // Fonction pour créer et positionner les mots-clés en cercle autour du titre
 function createKeywords(language) {
   // Récupère les mots-clés de la langue sélectionnée
-  const keywords = translations[language] ? translations[language].keywords : [];
+  const keywords = [
+    translations[language].keyword_office_365,
+    translations[language].keyword_vscode,
+    translations[language].keyword_eclipse,
+    translations[language].keyword_jetbrains,
+    translations[language].keyword_c,
+    translations[language].keyword_cpp,
+    translations[language].keyword_java,
+    translations[language].keyword_html,
+    translations[language].keyword_css,
+    translations[language].keyword_javascript,
+    translations[language].keyword_python,
+    translations[language].keyword_sql,
+    translations[language].keyword_git,
+    translations[language].keyword_curieuse,
+    translations[language].keyword_autonome,
+    translations[language].keyword_perseverante,
+    translations[language].keyword_polyvalente,
+  ];
 
   // Cibler le conteneur des mots-clés
-  const container = document.querySelector('.keywords-container');
+  const container = document.querySelector('.grid');
   
+  if (!container) {
+    console.error("Le conteneur des mots-clés n'a pas été trouvé.");
+    return;
+  }
+
   // Vider le conteneur avant d'ajouter les mots-clés
   container.innerHTML = '';
 
@@ -57,8 +79,8 @@ function createKeywords(language) {
 
     // Appliquer la position avec une transformation CSS
     keywordElement.style.position = 'absolute';
-    keywordElement.style.left = `50%`;
-    keywordElement.style.top = `50%`;
+    keywordElement.style.left = '50%';
+    keywordElement.style.top = '50%';
     keywordElement.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px)`;
 
     // Rotation de chaque mot-clé pour qu'il soit lisible
@@ -71,5 +93,8 @@ function setLanguage(language) {
   loadTranslations(language);  // Charge et applique les traductions en fonction de la langue
 }
 
-// Appel initial pour charger la langue par défaut (français)
-loadTranslations('fr');
+// Assurez-vous que le DOM est chargé avant d'exécuter le script
+document.addEventListener("DOMContentLoaded", function() {
+  // Appel initial pour charger la langue par défaut (français)
+  loadTranslations('fr');
+});
