@@ -54,7 +54,7 @@ function createKeywords(language) {
   document.body.appendChild(container);
 
   // Rayon du cercle
-  const radius = 180; 
+  const radius = 250; 
   const totalKeywords = keywords.length;
 
   // Ajouter chaque mot-clé dans le conteneur
@@ -72,7 +72,6 @@ function createKeywords(language) {
     const y = radius * Math.sin((angle - 90) * Math.PI / 180);
 
     // Appliquer la position avec une transformation CSS
-    keywordElement.style.position = 'absolute';
     keywordElement.style.left = `calc(50% + ${x}px)`;
     keywordElement.style.top = `calc(50% + ${y}px)`;
 
