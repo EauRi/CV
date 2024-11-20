@@ -65,6 +65,7 @@ body::after {
 }
 
 .navbar ul li a {
+    font-size: 1rem;
     color: #d1a575;
     text-decoration: none;
     padding: 0.5rem 1rem;
@@ -89,7 +90,7 @@ body::after {
     }
     .contact-button, .language-switcher button {
         font-size: 0.8rem; /* Réduction de la taille du texte */
-        padding: 0.3rem 0.7rem; /* Réduction des marges internes */
+        padding: 0.2rem 0.2rem; /* Réduction des marges internes */
     }
 }
 
@@ -118,7 +119,7 @@ body::after {
         padding: 0.2rem 0.5rem; /* Réduction supplémentaire des marges internes */
     }
     .navbar {
-        padding: 0 0; /* Réduit encore l'espace autour de la navbar */
+        padding: 0.1rem 0.1rem; /* Réduit encore l'espace autour de la navbar */
     }
 }
 
@@ -141,11 +142,13 @@ body::after {
     gap: 5px;
 }
 
-.contact-button {
-    transition: background 0.3s;
+.language-switcher button:hover {
+    background-color: #333;
+    color: #fff;
+    transform: scale(1.05);
 }
 
-.language-switcher .contact-button button:hover {
+.contact-button button:hover {
     background-color: #333;
     color: #fff;
     transform: scale(1.05);
