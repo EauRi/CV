@@ -118,12 +118,12 @@ body::after {
         padding: 0.2rem 0.5rem; /* Réduction supplémentaire des marges internes */
     }
     .navbar {
-        padding: 0 0.3rem; /* Réduit encore l'espace autour de la navbar */
+        padding: 0 0; /* Réduit encore l'espace autour de la navbar */
     }
 }
 
 .language-switcher button, .contact-button {
-    max-width: 60%; /* Empêche les boutons de déborder */
+    max-width: 90%; /* Empêche les boutons de déborder */
     box-sizing: border-box; /* Inclus padding/border dans la largeur totale */
     padding: 0.2rem 0.5rem;
     margin: 0; /* Supprime toute marge externe */
