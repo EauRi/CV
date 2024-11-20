@@ -136,34 +136,19 @@ body::after {
     cursor: pointer;
     transition: all 0.3s ease;
     border-radius: 5px;
+    justify-content: center;
+    gap: 5px;
 }
 
 .contact-button {
-    padding: 0.5rem 1rem;
-    color: #d1a575;
-    border: 2px solid #d1a575;
-    background: transparent;
-    cursor: pointer;
     transition: background 0.3s;
-}
-
-.contact-button:hover {
-    background-color: #d1a575;
-    color: #2e1b2b;
-}
-
-.language-switcher {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    margin-top: 20px;
 }
 
 .language-switcher button {
     text-transform: uppercase;
 }
 
-.language-switcher button:hover {
+.language-switcher .contact-button button:hover {
     background-color: #333;
     color: #fff;
     transform: scale(1.05);
