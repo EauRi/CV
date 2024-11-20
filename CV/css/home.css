@@ -156,7 +156,6 @@ body::after {
     background-color: transparent;
     border: 2px solid #d1a575;
     padding: 10px 10px;
-    font-size: 12px;
     color: #d1a575;
     text-transform: uppercase;
     cursor: pointer;
