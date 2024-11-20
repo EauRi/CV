@@ -83,6 +83,7 @@ body::after {
 @media (max-width: 768px) {
     .navbar ul li a {
         font-size: 0.8rem;
+        padding: 0.3rem 0.5rem;
     }
     .navbar {
         padding: 0 0.5rem; /* Réduit l'espace sur les côtés */
@@ -97,6 +98,7 @@ body::after {
 @media (max-width: 480px) {
     .navbar ul li a {
         font-size: 0.7rem;
+        padding: 0rem 0rem;
     }
     
 }
@@ -123,8 +125,7 @@ body::after {
     }
 }
 
-.language-switcher button, .contact-button {
-    max-width: 100%;     
+.language-switcher button, .contact-button {  
     text-transform: uppercase;
     box-sizing: border-box; /* Inclus padding/border dans la largeur totale */
     padding: 0.2rem 0.5rem;
