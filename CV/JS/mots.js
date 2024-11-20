@@ -63,8 +63,5 @@ function createKeywords() {
 
       // Rotation de chaque mot-clé pour qu'il soit lisible
       keywordElement.style.transform = `rotate(${angle}deg)`;
-      keywordElement.style.fontSize = '14px'; // Ajustez la taille du texte
-      keywordElement.style.backgroundColor = 'rgba(200, 94, 249, 0.36)';
-      keywordElement.style.color = 'rgb(212, 163, 115)';
   });
 }
