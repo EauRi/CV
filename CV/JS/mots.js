@@ -40,7 +40,7 @@ function createKeywords() {
   document.body.appendChild(container);
 
   // Rayon du cercle
-  const radius = 220; 
+  const radius = 100; 
   const totalKeywords = keywords.length;
 
   // Ajouter chaque mot-clé dans le conteneur
