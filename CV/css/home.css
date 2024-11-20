@@ -221,7 +221,7 @@ body::after {
 /* Style de chaque mot-clé */
 .keyword {
     position: absolute;
-    font-weight: 500;
+    font-weight: 50;
     padding: 10px 20px;
     border-radius: 30px;
     transform-origin: center center;
