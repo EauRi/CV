@@ -227,6 +227,9 @@ body::after {
     transform-origin: center center;
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
     text-transform: capitalize;
+    font-size: 14px; 
+    background-color: rgba(200, 94, 249, 0.36);
+    color: rgb(212, 163, 115);
 }
 
 /* Animation de rotation douce du cercle */
