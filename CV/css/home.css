@@ -174,8 +174,8 @@ body::after {
     background: #2d1b28;
     color: white;
     text-align: left;
-    padding: 40px;
-    margin-top: 30%;
+    padding: 40px; 
+    margin: 30% 15% 0 15%;
 }
 
 .hero-text {
