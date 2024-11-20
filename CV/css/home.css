@@ -68,7 +68,7 @@ body::after {
     font-size: 1rem;
     color: #d1a575;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.2rem 0.2rem;
     display: block;
     text-align: center; /* Centre le texte dans chaque lien */
 }
