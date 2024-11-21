@@ -356,6 +356,7 @@ body::after {
     align-items: center;
     justify-content: center;
     padding: 10px;
+    z-index: 2;
 }
 
 .flip-card-front img {
@@ -376,6 +377,7 @@ body::after {
     transform: rotateY(180deg);
     font-size: 14px;
     line-height: 1.6;
+    z-index: 1;
 }
 
 .flip-card-back h4 {
