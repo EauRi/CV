@@ -220,20 +220,43 @@ body::after {
     line-height: 1.5;
 }
 
-/* Style des mots-clés */
-.keyword {
-    position: absolute;
-    font-size: 1rem;
-    color: #000000a7;
-    background-color: #d4b573bb; /* Couleur de fond des mots-clés */
-    padding: 7px 10px;
-    border-radius: 10px;
+/* Container du cercle de mots-clés */
+.keywords-container {
+    position: relative;
+    height: 700px;  /* Ajustez la taille du conteneur */
+    margin-top: 15px;
     text-align: center;
-    white-space: nowrap;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Style de chaque mot-clé */
+.keyword {
+    position: absolute;
+    padding: 5px 10px;
+    border-radius: 30px;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    text-transform: capitalize;
+    font-size: 14px; 
+    background-color: rgba(200, 94, 249, 0.36);
+    color: rgb(212, 163, 115);
+}
+
+/* Animation de rotation douce du cercle */
+.keywords-container {
+    animation: rotate-circle 20s infinite linear;
+}
+/* Animation pour faire tourner les mots en cercle */
+@keyframes rotate-circle {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 
 /* Expérience - Design élégant */
 .section {
@@ -460,24 +483,6 @@ body::after {
     font-family: Arial, sans-serif;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Effet d'ombre */
     padding: 5px; /* Ajout d'espace pour du texte plus grand */
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .container2 {
-        grid-template-columns: 1fr; /* Une seule colonne pour la grille des boîtes */
-    }
-    
-    /* Adaptation des paragraphes en colonne sur les petits écrans */
-    .box p {
-        flex-direction: column; /* Empile les éléments les uns au-dessus des autres sur les petits écrans */
-    }
-    
-    /* Pour chaque span, occuper toute la largeur */
-    .box p span {
-        width: 100%; /* Chaque élément occupe toute la largeur de la boîte sur les petits écrans */
-        padding-left: 0; /* Supprimer le décalage de la puce sur les petits écrans */
-    }
 }
 
 /* Container principal pour le portfolio */
