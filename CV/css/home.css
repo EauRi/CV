@@ -303,11 +303,9 @@ body::after {
 
 /* Cartes */
 .flip-card {
-    background-color: transparent;
     width: 250px;
     height: 300px;
-    perspective: 1000px;
-    box-sizing: border-box;
+    perspective: 1000px; /* Crée l'effet 3D */
 }
 
 .flip-card-inner {
@@ -315,7 +313,7 @@ body::after {
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.8s;
+    transition: transform 0.8s ease;
     transform-style: preserve-3d;
 }
 
@@ -323,40 +321,19 @@ body::after {
     transform: rotateY(180deg);
 }
 
-/* Faces avant et arrière */
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden;
+    backface-visibility: hidden; /* Masque la face opposée */
     border-radius: 10px;
-    overflow: hidden;
-    box-sizing: border-box;
-    overflow-y: auto; /* Permet le défilement vertical si le contenu dépasse */
-}
-
-/* Arrière-plan pour chaque carte */
-.card-14 .flip-card-front {
-    background-color: #000000;
-}
-
-.card-2 .flip-card-front {
-    background-color: #4b009b;
-}
-
-.card-3 .flip-card-front {
-    background-color: #fa4516;
 }
 
 .flip-card-front {
-    border: 5px solid black;
+    background: #000; /* Arrière-plan personnalisé */
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 10px;
-    z-index: 2;
+    align-items: center;
 }
 
 .flip-card-front img {
@@ -365,43 +342,17 @@ body::after {
     border-radius: 8px;
 }
 
-/* Face arrière */
 .flip-card-back {
     background-color: #333;
     color: white;
+    transform: rotateY(180deg); /* Retourne cette face */
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
+    align-items: center;
     padding: 20px;
-    transform: rotateY(180deg);
-    font-size: 14px;
-    line-height: 1.6;
-    z-index: 1;
 }
 
-.flip-card-back h4 {
-    font-size: 18px;
-    margin: 0 0 10px 0;
-    font-weight: bold;
-    text-align: center;
-    width: 100%;
-}
-
-.flip-card-back h5 {
-    font-size: 16px;
-    margin: 0 0 10px 0;
-    font-weight: normal;
-    color: #ccc;
-    text-align: center;
-    width: 100%;
-}
-
-.flip-card-back p {
-    font-size: 14px;
-    line-height: 1.6;
-    text-align: left;
-}
 
 /* Container principal */
 .circle-layout {
