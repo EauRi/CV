@@ -183,44 +183,41 @@ body::after {
     padding: 40px;
 }
 
-.hero-text {
-    z-index: 2; /* Ensures the hero text stays on top */
-}
-
-.hero-text h1 {
-    font-size: 48px;
-    font-weight: bold;
-}
-
-.hero-text h2 {
-    font-size: 24px;
-    color: #d4a373;
-}
-/* Conteneur principal */
 .hero-section {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 60vh;
     background: #2d1b28;
     color: white;
-    text-align: center;
-    padding: 40px;
-    height: 100vh;
+    text-align: left;
+    padding: 40px; 
+    margin: 30% 15% 0 15%;
 }
 
-/* Style du texte principal */
+.hero-text {
+    position: relative;
+    z-index: 1; /* Ensures the hero text stays on top */
+}
+
 .hero-text h1 {
     font-size: 48px;
     font-weight: bold;
-    margin: 0;
+    color: rgb(245, 232, 214)smoke;
 }
 
 .hero-text h2 {
     font-size: 24px;
     color: #d4a373;
+}
+
+.hero-text h3 {
+    font-size: 17px;
+    font-style: italic;
+    color: #a06f3fc3;
+    margin-top: 10px;
+    line-height: 1.5;
 }
 
 /* Style des mots-clés */
