@@ -11,6 +11,7 @@ body {
     color: #ffffff;
     background-color: #2e1b2b;
 }
+
 .language-switcher {
     display: flex;
     justify-content: center;
@@ -236,8 +237,8 @@ body {
 /* Cartes */
 .flip-card {
     background-color: transparent;
-    width: 250px;
-    height: 300px;
+    width: 220px;
+    height: 280px;
     perspective: 1000px;
     box-sizing: border-box;
 }
@@ -333,13 +334,6 @@ body {
     text-align: left;
 }
 
-/* Section Supplémentaire */
-.extra-section {
-    padding: 20px;
-    background-color: #9a6d8c;
-    color: #fff;
-    text-align: center;
-}
 
 /* Container principal */
 .circle-layout {
@@ -391,8 +385,8 @@ body {
 
 /* Style pour les petits cercles */
 .small-circle {
-    width: 85px; /* Diamètre */
-    height: 85px; /* Diamètre */
+    width: 90px; /* Diamètre */
+    height: 90px; /* Diamètre */
     border: solid 2px black;
     border-radius: 50%; /* Cercle parfait */
     background-color: #f0f0f049; /* Couleur de fond */
@@ -400,7 +394,7 @@ body {
     justify-content: center; /* Centre horizontalement le texte */
     align-items: center; /* Centre verticalement le texte */
     text-align: center; /* Centre le texte */
-    font-size: 12px;
+    font-size: 11px;
     color: #000000; /* Couleur du texte */
     font-family: Arial, sans-serif;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Effet d'ombre */
