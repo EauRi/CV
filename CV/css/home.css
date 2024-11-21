@@ -183,28 +183,39 @@ body::after {
     padding: 40px;
 }
 
+.hero-text {
+    z-index: 2; /* Ensures the hero text stays on top */
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.hero-text h2 {
+    font-size: 24px;
+    color: #d4a373;
+}
+/* Conteneur principal */
 .hero-section {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 60vh;
     background: #2d1b28;
     color: white;
-    text-align: left;
-    padding: 40px; 
-    margin: 30% 15% 0 15%;
+    text-align: center;
+    padding: 40px;
+    height: 100vh;
 }
 
-.hero-text {
-    position: relative;
-    z-index: 1; /* Ensures the hero text stays on top */
-}
-
+/* Style du texte principal */
 .hero-text h1 {
     font-size: 48px;
     font-weight: bold;
-    color: rgb(245, 232, 214)smoke;
+    margin: 0;
 }
 
 .hero-text h2 {
@@ -212,50 +223,42 @@ body::after {
     color: #d4a373;
 }
 
-.hero-text h3 {
-    font-size: 17px;
-    font-style: italic;
-    color: #a06f3fc3;
-    margin-top: 10px;
-    line-height: 1.5;
+/* Style des mots-clés */
+.keyword {
+    position: absolute;
+    font-size: 1rem;
+    color: #000000a7;
+    background-color: #d4b573bb; /* Couleur de fond des mots-clés */
+    padding: 7px 10px;
+    border-radius: 10px;
+    text-align: center;
+    white-space: nowrap;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 10;
 }
 
-/* Container du cercle de mots-clés */
-.keywords-container {
-    position: relative;
-    height: 700px;  /* Ajustez la taille du conteneur */
-    margin-top: 15px;
-    text-align: center;
+
+
+/* Section Hero */
+.hero-section {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 90vh;
+    background-image: linear-gradient(135deg, #2e1b2b 30%, #3e2b3c 70%);
+    padding: 2rem;
+    text-align: left;
 }
 
-/* Style de chaque mot-clé */
-.keyword {
-    position: absolute;
-    padding: 5px 10px;
-    border-radius: 30px;
-    transform-origin: center center;
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    text-transform: capitalize;
-    font-size: 14px; 
-    background-color: rgba(200, 94, 249, 0.36);
-    color: rgb(212, 163, 115);
+.hero-text h1 {
+    font-size: 3rem;
+    color: #ffffff;
 }
 
-/* Animation de rotation douce du cercle */
-.keywords-container {
-    animation: rotate-circle 20s infinite linear;
-}
-/* Animation pour faire tourner les mots en cercle */
-@keyframes rotate-circle {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.hero-text h2 {
+    font-size: 2rem;
+    color: #d1a575;
+    margin: 1rem 0;
 }
 
 /* Expérience - Design élégant */
@@ -270,7 +273,6 @@ body::after {
     transform: translateY(20px);
     animation: fadeInUp 0.8s ease-out forwards;
     margin-top: 50px;
-    margin-bottom: 20px;
 }
 
 .section h2 {
@@ -483,6 +485,24 @@ body::after {
     font-family: Arial, sans-serif;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Effet d'ombre */
     padding: 5px; /* Ajout d'espace pour du texte plus grand */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container2 {
+        grid-template-columns: 1fr; /* Une seule colonne pour la grille des boîtes */
+    }
+    
+    /* Adaptation des paragraphes en colonne sur les petits écrans */
+    .box p {
+        flex-direction: column; /* Empile les éléments les uns au-dessus des autres sur les petits écrans */
+    }
+    
+    /* Pour chaque span, occuper toute la largeur */
+    .box p span {
+        width: 100%; /* Chaque élément occupe toute la largeur de la boîte sur les petits écrans */
+        padding-left: 0; /* Supprimer le décalage de la puce sur les petits écrans */
+    }
 }
 
 /* Container principal pour le portfolio */
