@@ -101,29 +101,6 @@ body::after {
     color: #d4a373;
 }
 
-/* Style des mots-clés */
-.keyword {
-    position: absolute;
-    font-size: 1rem;
-    color: #000000a7;
-    background-color: #d4b573bb; /* Couleur de fond des mots-clés */
-    padding: 7px 10px;
-    border-radius: 10px;
-    text-align: center;
-    white-space: nowrap;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    z-index: 10;
-}
-
-.page {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    scroll-snap-align: start;
-    padding: 20px;
-}
-
 /* Navbar */
 .navbar {
     display: flex;
@@ -180,6 +157,45 @@ body::after {
     margin: 1rem 0;
 }
 
+
+/* Container du cercle de mots-clés */
+.keywords-container {
+    position: relative;
+    height: 700px;  /* Ajustez la taille du conteneur */
+    margin-top: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style de chaque mot-clé */
+.keyword {
+    position: absolute;
+    padding: 5px 10px;
+    border-radius: 30px;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    text-transform: capitalize;
+    font-size: 14px; 
+    background-color: rgba(200, 94, 249, 0.36);
+    color: rgb(212, 163, 115);
+}
+
+/* Animation de rotation douce du cercle */
+.keywords-container {
+    animation: rotate-circle 20s infinite linear;
+}
+/* Animation pour faire tourner les mots en cercle */
+@keyframes rotate-circle {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 /* Expérience - Design élégant */
 .section {
     display: flex;
@@ -192,6 +208,7 @@ body::after {
     transform: translateY(20px);
     animation: fadeInUp 0.8s ease-out forwards;
     margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 .section h2 {
@@ -340,7 +357,6 @@ body::after {
     text-align: left;
 }
 
-
 /* Container principal */
 .circle-layout {
     display: flex;
@@ -355,7 +371,7 @@ body::after {
     display: flex; /* Aligne les cercles côte à côte */
     justify-content: space-around; /* Répartit les cercles uniformément */
     width: 100%; /* Ligne occupe toute la largeur */
-    gap: 20px; /* Espacement entre les cercles */
+    gap: 10px; /* Espacement entre les cercles */
 }
 
 /* Style pour les grands cercles */
