@@ -18,6 +18,10 @@ body::after {
     height: 200px; 
 }
 
+/* Sections individuelles (les "pages") */
+.allpage {
+    min-height: 100vh; /* Chaque section occupe la hauteur de l'écran */
+}
 
 .language-switcher button, .contact-button {  
     text-transform: uppercase;
@@ -115,11 +119,21 @@ body::after {
 
 /* Navbar */
 .navbar {
+    position: fixed;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Distribue l'espace entre les éléments */
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0 1rem;
     background-color: #2e1b2b;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 85px;
+    box-shadow: 0 2px 2px -2px black;
+    border-bottom: 2px solid black;
+    box-sizing: border-box;
+    overflow: hidden; /* Empêche tout débordement */
 }
 
 
