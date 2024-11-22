@@ -149,26 +149,45 @@ body::after {
 
 /* Section Hero */
 .hero-section {
+    position: relative;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 90vh;
-    background-image: linear-gradient(135deg, #2e1b2b 30%, #3e2b3c 70%);
-    padding: 2rem;
+    justify-content: center;
+    background: #2d1b28;
+    color: white;
     text-align: left;
+    padding: 40px; 
+    margin: 30% 15% 0 15%;
+}
+/* Sections individuelles (les "pages") */
+.allpage {
+    min-height: 100vh; /* Chaque section occupe la hauteur de l'écran */
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1; /* Ensures the hero text stays on top */
 }
 
 .hero-text h1 {
-    font-size: 3rem;
-    color: #ffffff;
+    font-size: 48px;
+    font-weight: bold;
+    color: rgb(245, 232, 214)smoke;
 }
 
 .hero-text h2 {
-    font-size: 2rem;
-    color: #d1a575;
-    margin: 1rem 0;
+    font-size: 24px;
+    color: #d4a373;
 }
 
+.hero-text h3 {
+    font-size: 17px;
+    font-style: italic;
+    color: #a06f3fc3;
+    margin-top: 10px;
+    line-height: 1.5;
+}
 
 /* Container du cercle de mots-clés */
 .keywords-container {
