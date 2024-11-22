@@ -10,6 +10,7 @@
 body {
     color: #ffffff;
     background-color: #2e1b2b;
+    overflow-x: hidden;
 }
 
 body::after {
@@ -306,7 +307,6 @@ body::after {
     animation: fadeInUp 0.8s ease-out forwards;
     margin-top: 50px;
     margin-bottom: 20px;
-    overflow-x: hidden;
 }
 
 .section h2 {
