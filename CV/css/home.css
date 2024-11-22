@@ -119,33 +119,99 @@ body::after {
 
 /* Navbar */
 .navbar {
-    position: fixed;
     display: flex;
-    justify-content: space-between; /* Distribue l'espace entre les éléments */
+    justify-content: space-between;
     align-items: center;
-    padding: 0 1rem;
+    padding: 1rem 2rem;
     background-color: #2e1b2b;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    height: 85px;
-    box-shadow: 0 2px 2px -2px black;
-    border-bottom: 2px solid black;
-    box-sizing: border-box;
-    overflow: hidden; /* Empêche tout débordement */
 }
 
+
+.navbar .language-switcher {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.navbar nav {
+    flex: 1; /* La partie nav prendra toute la largeur disponible */
+    display: flex;
+    justify-content: center; /* Centre les éléments dans la nav */
+}
 
 .navbar ul {
     display: flex;
     gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+    justify-content: center; /* Assure que les éléments de la liste sont centrés */
+}
+
+.navbar ul li {
+    list-style: none; /* Supprime les puces des éléments li */
 }
 
 .navbar ul li a {
+    font-size: 1.5rem;
     color: #d1a575;
     text-decoration: none;
+    padding: 0.2rem 0.2rem;
+    display: block;
+    text-align: center; /* Centre le texte dans chaque lien */
 }
+
+/* Responsivité : Réduire la taille du texte sur des écrans plus petits */
+@media (max-width: 1024px) {
+    .navbar ul li a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar ul li a {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.5rem;
+    }
+    .navbar {
+        padding: 0 0.5rem; /* Réduit l'espace sur les côtés */
+        height: 85px; /* Augmente la hauteur pour les petits écrans */
+    }
+    .contact-button, .language-switcher button {
+        font-size: 0.8rem; /* Réduction de la taille du texte */
+        padding: 0.2rem 0.2rem; /* Réduction des marges internes */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar ul li a {
+        font-size: 0.7rem;
+        padding: 0rem 0rem;
+    }
+    
+}
+
+/* Responsivité : Ajuste l'espace réservé pour les petits écrans */
+@media (max-width: 768px) {
+    .navbar {
+        height: 77px; /* Réduit la hauteur de la navbar sur les petits écrans */
+        padding: 0 0.5rem; /* Réduit l'espace sur les côtés pour les petits écrans */
+    }
+    .hero-section {
+        padding-top: 60px; /* Réduit l'espace réservé sous la navbar pour les petits écrans */
+    }
+}
+
+@media (max-width: 480px) {
+    .language-switcher button,
+    .contact-button {
+        font-size: 8px; /* Taille de texte plus petite */
+        padding: 0.2rem 0.5rem; /* Réduction supplémentaire des marges internes */
+    }
+    .navbar {
+        padding: 0.1rem 0.1rem; /* Réduit encore l'espace autour de la navbar */
+    }
+}
+
 
 .contact-button {
     padding: 0.5rem 1rem;
