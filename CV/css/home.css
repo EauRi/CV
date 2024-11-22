@@ -28,7 +28,6 @@ body::after {
 .allpage {
     min-height: 100vh; /* Chaque section occupe la hauteur de l'écran */
 }
-
 .navbar ul {
     display: flex;
     gap: 1.5rem;
