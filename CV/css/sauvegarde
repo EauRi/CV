@@ -21,38 +21,11 @@ body::after {
 .allpage {
     min-height: 100vh; /* Chaque section occupe la hauteur de l'écran */
 }
-
-/* Navbar */
-.navbar {
-    position: fixed;
-    display: flex;
-    justify-content: space-between; /* Distribue l'espace entre les éléments */
-    align-items: center;
-    padding: 0 1rem;
-    background-color: #2e1b2b;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    height: 85px;
-    box-shadow: 0 2px 2px -2px black;
-    border-bottom: 2px solid black;
-    box-sizing: border-box;
-    overflow: hidden; /* Empêche tout débordement */
-}
-
 .navbar .language-switcher {
     display: flex;
     gap: 1rem;
     align-items: center;
 }
-
-.navbar nav {
-    flex: 1; /* La partie nav prendra toute la largeur disponible */
-    display: flex;
-    justify-content: center; /* Centre les éléments dans la nav */
-}
-
 .navbar ul {
     display: flex;
     gap: 1.5rem;
@@ -73,6 +46,32 @@ body::after {
     display: block;
     text-align: center; /* Centre le texte dans chaque lien */
 }
+/* Navbar */
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between; /* Distribue l'espace entre les éléments */
+    align-items: center;
+    padding: 0 1rem;
+    background-color: #2e1b2b;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 85px;
+    box-shadow: 0 2px 2px -2px black;
+    border-bottom: 2px solid black;
+    box-sizing: border-box;
+    overflow: hidden; /* Empêche tout débordement */
+}
+.navbar nav {
+    flex: 1; /* La partie nav prendra toute la largeur disponible */
+    display: flex;
+    justify-content: center; /* Centre les éléments dans la nav */
+}
+ 
+
+
 
 /* Responsivité : Réduire la taille du texte sur des écrans plus petits */
 @media (max-width: 1024px) {
