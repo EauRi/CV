@@ -5,6 +5,7 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
