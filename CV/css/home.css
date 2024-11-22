@@ -127,31 +127,14 @@ body::after {
 }
 
 
-.navbar nav {
-    flex: 1; /* La partie nav prendra toute la largeur disponible */
-    display: flex;
-    justify-content: center; /* Centre les éléments dans la nav */
-}
-
 .navbar ul {
     display: flex;
     gap: 1.5rem;
-    padding: 0;
-    margin: 0;
-    justify-content: center; /* Assure que les éléments de la liste sont centrés */
-}
-
-.navbar ul li {
-    list-style: none; /* Supprime les puces des éléments li */
 }
 
 .navbar ul li a {
-    font-size: 1.5rem;
     color: #d1a575;
     text-decoration: none;
-    padding: 0.2rem 0.2rem;
-    display: block;
-    text-align: center; /* Centre le texte dans chaque lien */
 }
 
 /* Responsivité : Réduire la taille du texte sur des écrans plus petits */
