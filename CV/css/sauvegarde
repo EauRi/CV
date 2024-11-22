@@ -64,12 +64,6 @@ body::after {
     box-sizing: border-box;
     overflow: hidden; /* Empêche tout débordement */
 }
-.navbar nav {
-    flex: 1; /* La partie nav prendra toute la largeur disponible */
-    display: flex;
-    justify-content: center; /* Centre les éléments dans la nav */
-}
- 
 
 
 

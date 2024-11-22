@@ -10,7 +10,6 @@
 body {
     color: #ffffff;
     background-color: #2e1b2b;
-    overflow-x: hidden;
 }
 
 body::after {
@@ -258,13 +257,7 @@ body::after {
 
 /* Container du cercle de mots-clés */
 .keywords-container {
-    position: relative;
-    height: 450px; 
-    margin-top: 15px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 15%;
 }
 
 /* Style de chaque mot-clé */
