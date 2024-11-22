@@ -127,12 +127,6 @@ body::after {
 }
 
 
-.navbar .language-switcher {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
 .navbar nav {
     flex: 1; /* La partie nav prendra toute la largeur disponible */
     display: flex;
@@ -211,7 +205,6 @@ body::after {
         padding: 0.1rem 0.1rem; /* Réduit encore l'espace autour de la navbar */
     }
 }
-
 
 .contact-button {
     padding: 0.5rem 1rem;
