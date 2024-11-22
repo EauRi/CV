@@ -118,6 +118,10 @@ body::after {
     font-size: 24px;
     color: #d4a373;
 }
+/* Sections individuelles (les "pages") */
+.allpage {
+    min-height: 100vh; /* Chaque section occupe la hauteur de l'écran */
+}
 
 /* Navbar */
 .navbar {
@@ -132,6 +136,7 @@ body::after {
 .navbar ul {
     display: flex;
     gap: 1.5rem;
+    list-style: none; 
 }
 
 .navbar ul li a {
