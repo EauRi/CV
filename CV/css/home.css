@@ -264,7 +264,6 @@ body::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-x: hidden;
 }
 
 /* Style de chaque mot-clé */
@@ -307,6 +306,7 @@ body::after {
     animation: fadeInUp 0.8s ease-out forwards;
     margin-top: 50px;
     margin-bottom: 20px;
+    overflow-x: hidden;
 }
 
 .section h2 {
