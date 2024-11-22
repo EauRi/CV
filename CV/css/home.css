@@ -144,7 +144,6 @@ body::after {
     color: #d1a575;
     text-decoration: none;
     padding: 0.2rem 0.2rem;
-    display: block;
 }
 
 .contact-button {
