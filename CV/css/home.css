@@ -18,6 +18,30 @@ body::after {
     height: 200px; 
 }
 
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #2e1b2b;
+}
+
+
+.navbar ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none; 
+}
+
+.navbar ul li a {
+    font-size: 1.5rem;
+    color: #d1a575;
+    text-decoration: none;
+    padding: 0.2rem 0.2rem;
+    display: block;
+}
+
 .navbar .language-switcher {
     display: flex;
     gap: 1rem;
@@ -168,30 +192,6 @@ body::after {
 .hero-text h2 {
     font-size: 24px;
     color: #d4a373;
-}
-
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #2e1b2b;
-}
-
-
-.navbar ul {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none; 
-}
-
-.navbar ul li a {
-    font-size: 1.5rem;
-    color: #d1a575;
-    text-decoration: none;
-    padding: 0.2rem 0.2rem;
-    display: block;
 }
 
 .contact-button {
