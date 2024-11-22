@@ -20,13 +20,22 @@ body::after {
 
 /* Navbar */
 .navbar {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0 1rem;
     background-color: #2e1b2b;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 85px;
+    box-shadow: 0 2px 2px -2px black;
+    border-bottom: 2px solid black;
+    box-sizing: border-box;
+    overflow: hidden; /* Empêche tout débordement */
 }
-
 
 .navbar ul {
     display: flex;
