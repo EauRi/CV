@@ -258,7 +258,7 @@ body::after {
 /* Container du cercle de mots-clés */
 .keywords-container {
     position: relative;
-    height: 700px;  /* Ajustez la taille du conteneur */
+    height: 450px; 
     margin-top: 15px;
     text-align: center;
     display: flex;
