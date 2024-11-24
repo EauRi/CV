@@ -287,6 +287,7 @@ body::after {
 /* Animation de rotation douce du cercle */
 .keywords-container {
     animation: rotate-circle 20s infinite linear;
+    overflow-x: visible;
 }
 /* Animation pour faire tourner les mots en cercle */
 @keyframes rotate-circle {
