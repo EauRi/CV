@@ -259,7 +259,17 @@ body::after {
 .keywords-container {
     margin-top: 15%;
 }
+@media (max-width: 768px) {
+    .keywords-container {
+        margin-top: 20%;
+    }
+}
 
+@media (max-width: 480px) {
+    .keywords-container {
+        margin-top: 30%;
+    }    
+}
 /* Style de chaque mot-clé */
 .keyword {
     position: absolute;
