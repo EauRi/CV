@@ -474,7 +474,7 @@ body::after {
     display: flex; /* Aligne les cercles côte à côte */
     justify-content: space-around; /* Répartit les cercles uniformément */
     width: 100%; /* Ligne occupe toute la largeur */
-    gap: 10px; /* Espacement entre les cercles */
+    gap: 5px; /* Espacement entre les cercles */
 }
 
 /* Style pour les grands cercles */
