@@ -366,7 +366,6 @@ body::after {
     height: 280px;
     perspective: 1000px;
     box-sizing: border-box;
-    overflow-x: inherit;
 }
 
 .flip-card-inner {
@@ -393,6 +392,7 @@ body::after {
     border-radius: 10px;
     overflow: hidden;
     box-sizing: border-box;
+    overflow-x: inherit;
     overflow-y: auto; /* Permet le défilement vertical si le contenu dépasse */
 }
 
