@@ -375,6 +375,7 @@ body::after {
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
+    overflow-x: visible;
 }
 
 .flip-card:hover .flip-card-inner {
@@ -392,7 +393,6 @@ body::after {
     border-radius: 10px;
     overflow: hidden;
     box-sizing: border-box;
-    overflow-x: inherit;
     overflow-y: auto; /* Permet le défilement vertical si le contenu dépasse */
 }
 
